@@ -130,11 +130,21 @@ a{
 
 }
     }
+    .note{
+      background-color: white;
+      padding:15px;
+      color:rgb(48, 47, 47);
+    }
+    .link-text{
+      text-decoration: underline;
+      color:rgb(0, 68, 255);
+    }
   </style>
 </head>
 <body>
   <div class="container">
     <h2>Welcome to Multi Level Speaking Exam</h2>
+    <p class="note">Siz bilan bog'lanishimiz uchun ismingiz va Telegram <span class="link-text">@username</span> ni yozish</p>
 <form id="form">
 	<input type="text" name="" id="inputField" placeholder="Your FullName Telegram@username">
   <input  id="sendBtn" type="button" value="Send" onclick="sendData()">
