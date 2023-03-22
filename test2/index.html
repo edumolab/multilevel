@@ -86,6 +86,14 @@ a{
         font-size: 18px;
       }
 
+      .note{
+      width: 300px;
+      background-color: white;
+      padding:5px;
+      color:rgb(48, 47, 47);
+      border-radius: 3px;
+    }
+
       form{
       display: flex;
       align-items: center;
@@ -130,11 +138,24 @@ a{
 
 }
     }
+
+  }
+    .note{
+      background-color: white;
+      padding:15px;
+      border-radius: 3px;
+      color:rgb(48, 47, 47);
+    }
+    .link-text{
+      text-decoration: underline;
+      color:rgb(0, 68, 255);
+    }
   </style>
 </head>
 <body>
   <div class="container">
     <h2>Welcome to Multi Level Speaking Exam</h2>
+    <span class="note">Siz bilan bog'lanishimiz uchun ismingiz va Telegram <span class="link-text">@username</span> ni yozing!</span>
 <form id="form">
 	<input type="text" name="" id="inputField" placeholder="Enter Your Full Name">
   <input  id="sendBtn" type="button" value="Send" onclick="sendData()">
