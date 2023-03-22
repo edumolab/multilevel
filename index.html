@@ -256,7 +256,7 @@
 </div>
 
 <div class="container mt-3">
-	<div class="row mt-3 mb-3">
+	<div class="row mt-3 mb-3" id="row-data">
 		
      </div>
 </div>
@@ -285,7 +285,7 @@
 
   const Api_URL='card.json';
 async function show() {
-	const row=document.querySelector(".row");
+	const row=document.getElementById("row-data"");
     row.innerHTML='';
 	const response = await fetch(Api_URL);
 	const json= await response.json();
