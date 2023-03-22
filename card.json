@@ -1,0 +1,67 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "#Language, Device",
+      "img":"https://multilevel.vercel.app/img/ticket6.png",
+      "status": "Free",
+      "link": ""
+    },
+    {
+      "id": 2,
+      "title": "#Hobby, Activities",
+      "img":"https://multilevel.vercel.app/img/ticket6.png",
+      "status": "Free",
+      "link": ""
+    },
+    {
+      "id": 3,
+      "title": "#Reading, Books",
+      "img":"https://multilevel.vercel.app/img/ticket6.png",
+      "status": "Free",
+      "link": ""
+    },
+    {
+      "id": 4,
+      "title": "#Education, Future",
+      "img":"https://multilevel.vercel.app/img/ticket6.png",
+      "status": "Free",
+      "link": ""
+    },
+    {
+      "id": 5,
+      "title": "#Technology, Life",
+      "img":"https://multilevel.vercel.app/img/ticket6.png",
+      "status": "Free",
+      "link": ""
+    },
+    {
+      "id": 6,
+      "title": "#Marketing, Business",
+      "img":"https://multilevel.vercel.app/img/ticket6.png",
+      "status": "Soon",
+      "link": ""
+    },
+    {
+      "id": 7,
+      "title": "#Hometown, House",
+      "img":"https://multilevel.vercel.app/img/ticket6.png",
+      "status": "Free",
+      "link": ""
+    },
+    {
+      "id": 8,
+      "title": "#Work, Study",
+      "img":"https://multilevel.vercel.app/img/ticket6.png",
+      "status": "<i class='fa fa-lock'></i>",
+      "link": ""
+    },
+    {
+      "id": 9,
+      "title": "#Leisure, Sport",
+      "img":"https://multilevel.vercel.app/img/ticket6.png",
+      "status": "<i class='fa fa-lock'></i>",
+      "link": ""
+    }
+  ]
+}
