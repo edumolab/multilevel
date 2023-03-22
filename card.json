@@ -38,7 +38,7 @@
     {
       "id": 6,
       "title": "#Marketing, Business",
-      "img":"mg/free.png",
+      "img":"img/free.png",
       "status": "Soon",
       "link": ""
     },
@@ -59,7 +59,7 @@
     {
       "id": 9,
       "title": "#Leisure, Sport",
-      "img":"ticket6.png",
+      "img":"img/ticket6.png",
       "status": "<i class='fa fa-lock'></i>",
       "link": ""
     }
