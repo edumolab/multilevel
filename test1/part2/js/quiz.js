@@ -116,10 +116,7 @@ function startRecording() {
       };
       recorder.start();
 
-      timeout_status = setTimeout(function () {
-        console.log("5 min timeout");
-        stopRecording();
-      }, 300000);
+      
 
     });
 }
