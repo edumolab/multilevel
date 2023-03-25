@@ -152,7 +152,6 @@ function startRecording() {
       };
       recorder.start();
 
-
     });
 }
 

@@ -114,9 +114,7 @@ function startRecording() {
           .then(data => console.log(data))
           .catch(error => console.error(error));
       };
-      recorder.start();
-
-      
+      recorder.start(); 
 
     });
 }

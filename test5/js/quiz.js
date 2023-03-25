@@ -71,10 +71,10 @@
  
 
   if (currentQuestionIndex >Object.keys(questions).length) {
-    stopRecording();
     timer.style.display="none";
     document.querySelector('.circle').style.display="none";
       setTimeout(function () {
+        stopRecording();
         redirect();
       }, 10000);
 
