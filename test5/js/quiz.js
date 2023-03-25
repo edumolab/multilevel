@@ -70,7 +70,7 @@
   
  
 
-  if (currentQuestionIndex >=Object.keys(questions).length) {
+  if (currentQuestionIndex >Object.keys(questions).length) {
     stopRecording();
     timer.style.display="none";
     document.querySelector('.circle').style.display="none";
