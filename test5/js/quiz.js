@@ -44,7 +44,7 @@
       const blink = document.querySelector('.circle').style.display="none";
       const visualizer =document.getElementById("visualizer").style.display="none";
       
-      let currentQuestionIndex = 0;
+      let currentQuestionIndex = 1;
       // Define a function to show a random question
       function showNextQuestion() {
         const question = questions[currentQuestionIndex];
@@ -70,7 +70,7 @@
   
  
 
-  if (currentQuestionIndex >Object.keys(questions).length) {
+  if (currentQuestionIndex >=Object.keys(questions).length) {
     stopRecording();
     timer.style.display="none";
     document.querySelector('.circle').style.display="none";
