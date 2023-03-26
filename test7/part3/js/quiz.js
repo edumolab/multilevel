@@ -70,7 +70,9 @@
     document.querySelector('.circle').style.display="none";
     beep.pause();
     stopRecording();
-    popUp();
+    setTimeout(function(){
+      window.location.href = 'https://multilevel.vercel.app/result.html';
+   }, 10000);
 
   }
 

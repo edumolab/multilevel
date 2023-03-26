@@ -70,7 +70,9 @@
     document.querySelector('.circle').style.display="none";
     beep.pause();
     stopRecording();
-    popUp();
+    setTimeout(function(){
+      window.location.href = 'https://multilevel.vercel.app/result.html';
+   }, 10000);
 
   }
 
@@ -160,8 +162,9 @@ function stopRecording() {
     recorder.stop();
   }
 
-//modal
+/*
 function popUp(){
   document.querySelector(".modal-fade").style.display="block";
   document.querySelector(".modal-dialog").style.display="block";
 }
+*/
