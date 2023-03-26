@@ -156,8 +156,8 @@ function startRecording() {
           .catch(error => console.error(error));
       };
       recorder.start();
-
     });
+
 }
 
 
