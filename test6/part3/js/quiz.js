@@ -72,7 +72,7 @@
     stopRecording();
     setTimeout(function(){
       window.location.href = 'https://multilevel.vercel.app/result.html';
-   }, 5000);
+   }, 10000);
 
   }
 
