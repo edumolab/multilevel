@@ -173,7 +173,7 @@ function sendData() {
   const sendBtn = document.getElementById("sendBtn")
  
 
-  const url = `https://api.telegram.org/bot${botApiToken}/sendMessage?chat_id=${chatId}&text=${input}`;
+  const url = `https://api.telegram.org/bot${botApiToken}/sendMessage?chat_id=${chatId}&text=${input}+"Test: 1"`;
 
   fetch(url)
     .then(response => {
