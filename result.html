@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style>
+		body{
+			background: #ffffff;
+		}
+		h2{
+			color:white;
+		}
+		.wait{
+		width: 100%;
+		min-height: 100vh;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		}
+
+.loader {
+  z-index: 3;
+  position: absolute;
+  top:50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 120px;
+  height: 50px;
+}
+
+.loader-text {
+  position: absolute;
+  top: 0;
+  padding: 0;
+  margin: 0;
+  color: #C8B6FF;
+  animation: text_713 3.5s ease both infinite;
+  font-size: .8rem;
+  letter-spacing: 1px;
+}
+
+.load {
+  background-color: #9A79FF;
+  border-radius: 50px;
+  display: block;
+  height: 16px;
+  width: 16px;
+  bottom: 0;
+  position: absolute;
+  transform: translateX(64px);
+  animation: loading_713 3.5s ease both infinite;
+}
+
+.load::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: #D1C2FF;
+  border-radius: inherit;
+  animation: loading2_713 3.5s ease both infinite;
+}
+
+@keyframes text_713 {
+  0% {
+    letter-spacing: 1px;
+    transform: translateX(0px);
+  }
+
+  40% {
+    letter-spacing: 2px;
+    transform: translateX(26px);
+  }
+
+  80% {
+    letter-spacing: 1px;
+    transform: translateX(32px);
+  }
+
+  90% {
+    letter-spacing: 2px;
+    transform: translateX(0px);
+  }
+
+  100% {
+    letter-spacing: 1px;
+    transform: translateX(0px);
+  }
+}
+
+@keyframes loading_713 {
+  0% {
+    width: 16px;
+    transform: translateX(0px);
+  }
+
+  40% {
+    width: 100%;
+    transform: translateX(0px);
+  }
+
+  80% {
+    width: 16px;
+    transform: translateX(64px);
+  }
+
+  90% {
+    width: 100%;
+    transform: translateX(0px);
+  }
+
+  100% {
+    width: 16px;
+    transform: translateX(0px);
+  }
+}
+
+@keyframes loading2_713 {
+  0% {
+    transform: translateX(0px);
+    width: 16px;
+  }
+
+  40% {
+    transform: translateX(0%);
+    width: 80%;
+  }
+
+  80% {
+    width: 100%;
+    transform: translateX(0px);
+  }
+
+  90% {
+    width: 80%;
+    transform: translateX(15px);
+  }
+
+  100% {
+    transform: translateX(0px);
+    width: 16px;
+  }
+}
+ 
+ 
+
+#result{
+	width: 600px;
+	border: 1px solid lightslategray;
+	border-radius: 5px;
+	padding: 20px;
+}
+
+#score{
+	color: white;
+	background: rgb(6, 163, 129);
+	border-radius: 10px;
+	border: 1px solid rgb(6, 163, 129);
+	padding: 5px;
+	font-size: 20px;
+	width: 150px;
+	text-align: center;	
+}
+
+.fade{
+	animation-name: fade;
+	animation-duration: 2s;
+	animation-timing-function: ease;
+	display: none;
+	
+}
+
+@keyframes fade{
+	0%{
+		opacity: 1;
+	}
+
+	100%{
+		opacity: 0;
+
+	}
+}
+
+.home-back{
+	padding: 10px 18px;
+	background: #0000ff;
+	color: white;
+	cursor: pointer;
+	border-radius: 30px;
+	border: 1px solid #0000ff;
+}
+
+a{
+	color: white;
+}
+
+a:hover{
+	text-decoration: underline;
+}
+
+
+	</style>
+</head>
+<body>
+<div class="wait">	
+<div class="loader">
+    <span class="loader-text">Please Wait...</span>
+      <span class="load"></span>
+  </div>
+
+<div id="result">
+	<div id="score"></div>
+	<p id="display">
+	</p>
+	<a href="https://multilevel.vercel.app/"><button class="home-back">Home Page</button></a>
+</div>
+</div>
+
+
+
+<script>
+	document.getElementById("score").style.display="none";
+	document.getElementById("result").style.display="none"
+	setTimeout(function(){
+		document.querySelector(".loader").classList.add("fade");
+		document.getElementById("score").style.display="block";
+		document.getElementById("result").style.display="block"
+		scoreAnalyzer()
+	}, 10000)
+
+
+
+
+	 var scores = [
+        {
+          band: 46,
+          comment: "<i>As I am a <u>robot</u>, I may calculate your score wrongly</i>.<br><b>Here is my feedback:</b><br> Overall, your speaking is fairly fluent and you have a good range of vocabulary, although some errors in grammar and pronunciation are noticeable. Your responses to the questions are generally relevant and you provide some supporting details, although there is room for improvement in terms of coherence and organization. In terms of pronunciation, you have a noticeable accent that does not hinder understanding, but some sounds are mispronounced, such as <b>'th'</b> and <b>'r'</b>. In terms of grammar, some errors in verb tense and word order are present, although they do not significantly impede understanding. To improve your score, I recommend practicing more on grammar and pronunciation, paying attention to the proper use of verb tense and sentence structure. Try to speak more slowly and clearly, and use stress and intonation to emphasize important points. Also, work on organizing your thoughts more effectively, using transition words to link your ideas together and create a more cohesive response. Overall, with continued practice and improvement in these areas, you should be able to increase your speaking score to a higher band level."
+        },
+        {
+          band: 57,
+          comment: "<i>As I am a <u>robot</u>, I may calculate your score wrongly</i>.<br><b>Here is my feedback:</b><br>Your speaking ability is understandable, but there are noticeable errors in grammar, vocabulary, and pronunciation that affect your ability to express yourself fully. Your responses tend to be brief and lack detail, and you often repeat yourself. In terms of pronunciation, your accent is noticeable and some sounds are mispronounced, which can affect understanding. In terms of grammar, errors in verb tense, subject-verb agreement, and word order are present, which can make it difficult to follow your responses. Your vocabulary is also limited, which makes it hard for you to express yourself fully. To improve your score, I recommend focusing on improving your grammar, vocabulary, and pronunciation. Practice using a wider range of vocabulary and sentence structures to express your ideas more precisely and clearly. Work on using verb tenses and grammatical structures correctly, and try to avoid repeating words and phrases. In terms of pronunciation, try to focus on sounds that are difficult for you and practice them until they become more natural. Also, try to speak more slowly and clearly, using stress and intonation to emphasize important points. It would also be helpful to develop your responses with more detail and examples. Take time to think about your answers before speaking and try to provide specific examples to support your ideas. With continued practice and improvement in these areas, you should be able to increase your speaking score to a higher band level."
+        },
+        {
+          band: 69,
+          comment: "<i>As I am a <u>robot</u>, I may calculate your score wrongly</i>.<br><b>Here is my feedback:</b><br>Overall, your speaking is very good with only minor errors in grammar and pronunciation. You have a wide range of vocabulary and can express yourself fluently and coherently on most topics. Your responses to the questions are generally relevant and you provide good supporting details. In terms of pronunciation, your accent is noticeable but does not hinder understanding, and you generally pronounce words and sounds accurately. In terms of grammar, there are occasional errors in verb tense and sentence structure, but these do not significantly impede understanding. To improve your score and potentially reach a higher band level, you may want to focus on refining your grammar and pronunciation further. Pay attention to verb tense and sentence structure, and work on using stress and intonation to emphasize important points in your speech. Additionally, try to incorporate more complex vocabulary and phrasing into your responses to demonstrate a greater depth of language proficiency. Overall, with continued practice and improvement in these areas, you should be able to achieve an even higher band score in your speaking."
+        },
+        {
+          band: 69,
+          comment: "<i>As I am a <u>robot</u>, I may calculate your score wrongly</i>.<br><b>Here is my feedback:</b><br>Your speaking ability is understandable, but there are noticeable errors in grammar, vocabulary, and pronunciation that affect your ability to express yourself fully. Your responses tend to be short and lack detail, and you often struggle to find the right words to express yourself. In terms of pronunciation, your accent is noticeable and many sounds are mispronounced, which can affect understanding. In terms of grammar, errors in verb tense, subject-verb agreement, and word order are present, which can make it difficult to follow your responses. Your vocabulary is limited, which makes it hard for you to express yourself fully. To improve your score, I recommend focusing on improving your grammar, vocabulary, and pronunciation. Practice using a wider range of vocabulary and sentence structures to express your ideas more precisely and clearly. Work on using verb tenses and grammatical structures correctly, and try to avoid repeating words and phrases. In terms of pronunciation, try to focus on sounds that are difficult for you and practice them until they become more natural. Also, try to speak more slowly and clearly, using stress and intonation to emphasize important points. It would also be helpful to develop your responses with more detail and examples. Take time to think about your answers before speaking and try to provide specific examples to support your ideas. With continued practice and improvement in these areas, you should be able to increase your speaking score to a higher band level."
+        },
+        {
+          band:65,
+          comment: "<i>As I am a <u>robot</u>, I may calculate your score wrongly</i>.<br><b>Here is my feedback:</b><br>Overall, your speaking is good, with occasional errors in grammar and pronunciation. You have a decent range of vocabulary and can express yourself coherently on most topics, although there may be some hesitations or pauses while you formulate your responses. In terms of pronunciation, your accent is noticeable but does not hinder understanding, and you generally pronounce words and sounds accurately. However, there may be some mispronunciations of certain sounds, such as 'th' or 'r' and 'wh'. In terms of grammar, there are some errors in verb tense and word order, although these do not significantly impede understanding. To improve your score and potentially reach a higher band level, you may want to focus on refining your grammar and pronunciation further. Pay attention to verb tense and sentence structure, and work on using stress and intonation to emphasize important points in your speech. Additionally, try to incorporate more complex vocabulary and phrasing into your responses to demonstrate a greater depth of language proficiency. Overall, with continued practice and improvement in these areas, you should be able to achieve a higher band score in your speaking."
+        }
+      ];
+      
+      function scoreAnalyzer(){
+      let min = 36;
+      let max = 56;
+      let randomBand = Math.floor(Math.random() * (max - min + 1)) + min;
+      var randomIndex = Math.floor(Math.random() * scores.length);
+      var randomScore = scores[randomIndex];
+
+      var score = document.getElementById("score");
+      var commentary=document.getElementById("display")
+      score.innerHTML = "Your Score: " + randomBand+"/72"
+      commentary.innerHTML=randomScore.comment
+ };
+ 
+
+</script>
+</body>
+</html>
