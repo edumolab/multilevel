@@ -75,6 +75,7 @@ console.log(Object.keys(questions).length)
     document.querySelector('.circle').style.display="none";
     beep.pause();
     stopRecording();
+    audioElement.pause();
     setTimeout(function(){
       window.location.href = 'https://multilevel.vercel.app/result.html';
    }, 10000);
