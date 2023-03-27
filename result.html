@@ -207,10 +207,34 @@ mark{
   background-color:rgb(250, 235, 215);
 }
 
+.btn-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height:30px;
+  width: 100%;
+}
+
+.subscribe-btn{
+ padding: 15px 20px;
+ animation-name: colorchange;
+ animation-duration: 2s;
+ animation-timing-funtion: ease;
+ border: 1px solid dodgerblue;
+ border-radius: 30px;
+ background: dodgerblue;
+ width: 300px;
+ font-size:23px;
+ font-weight: bold;
+ color:white;
+}
 
 	</style>
 </head>
 <body>
+  <div class="btn-container">
+    <button class="subscribe-btn">Join in Our Telegram Group</button>
+  </div>
 <div class="wait">	
 <div class="loader">
     <span class="loader-text">Please Wait...</span>
@@ -259,7 +283,7 @@ mark{
         },
         {
           band:65,
-          comment: "<i>As I am a <u>robot</u>, I may calculate your score wrongly</i>.<br><b>Here is my feedback:</b><br>Overall, your speaking is good, with occasional errors in grammar and pronunciation. <mark>You have a decent range of vocabulary and can express yourself coherently on most topics, although there may be some hesitations or pauses while you formulate your responses. In terms of pronunciation, your accent is noticeable but does not hinder understanding, and you generally pronounce words and sounds accurately</mark>. However, there may be some mispronunciations of certain sounds, such as 'th' or 'r' and 'wh'. In terms of grammar, there are some errors in verb tense and word order, although these do not significantly impede understanding. To improve your score and potentially reach a higher band level, you may want to <span>focus on refining your grammar and pronunciation further. Pay attention to verb tense and sentence structure, and work on using stress and intonation to emphasize important points in your speech</span>. Additionally, try to incorporate more complex vocabulary and phrasing into your responses to demonstrate a greater depth of language proficiency. Overall, with continued practice and improvement in these areas, you should be able to achieve a higher band score in your speaking."
+          comment: "<i>As I am a <u>robot</u>, I may calculate your score wrongly</i>.<br><b>Here is my feedback:</b><br>Overall, your speaking is good, with occasional errors in grammar and pronunciation. <mark>You have a decent range of vocabulary and can express yourself coherently on most topics, although there may be some hesitations or pauses while you formulate your responses. In terms of pronunciation, your accent is noticeable but does not hinder understanding, and you generally pronounce words and sounds accurately</mark>. However, there may be some mispronunciations of certain sounds, such as 'th' or 'r' and 'wh'. In terms of grammar, <mark>there are some errors in verb tense and word order, although these do not significantly impede understanding</mark>. To improve your score and potentially reach a higher band level, you may want to <span>focus on refining your grammar and pronunciation further. Pay attention to verb tense and sentence structure, and work on using stress and intonation to emphasize important points in your speech</span>. Additionally, try to incorporate more complex vocabulary and phrasing into your responses to demonstrate a greater depth of language proficiency. Overall, with continued practice and improvement in these areas, you should be able to achieve a higher band score in your speaking."
         }
       ];
       
@@ -278,6 +302,5 @@ mark{
  
 
 </script>
-<script async src="https://comments.app/js/widget.js?3" data-comments-app-website="p36_iEVy" data-limit="5"></script>
 </body>
 </html>
