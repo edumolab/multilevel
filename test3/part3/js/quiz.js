@@ -26,14 +26,9 @@
     "audio_url": "audio/5.mp3"
   },
   "6": {
-    "id":"_",
+    "id":"",
     "question": "This is the end of speaking test!",
     "audio_url": "audio/end.mp3"
-  },
-  "7": {
-    "id":"",
-    "question": "Wait, Preparing your result!",
-    "audio_url": ""
   }
 };
 
@@ -75,7 +70,6 @@ console.log(Object.keys(questions).length)
     document.querySelector('.circle').style.display="none";
     beep.pause();
     stopRecording();
-    audioElement.pause();
     setTimeout(function(){
       window.location.href = 'https://multilevel.vercel.app/result.html';
    }, 10000);
