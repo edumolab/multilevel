@@ -64,7 +64,9 @@
  });
   
  
+  }
 
+  
   if (currentQuestionIndex >Object.keys(questions).length) {
     timer.style.display="none";
     document.querySelector('.circle').style.display="none";
@@ -74,7 +76,6 @@
       window.location.href = 'https://multilevel.vercel.app/result.html';
    }, 10000);
 
-  }
 
 
         audioElement.addEventListener("ended", startCountdown);
