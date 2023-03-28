@@ -44,16 +44,16 @@
     },
     {
       "id": 7,
-      "title": "#Hometown, House",
+      "title": "#Hometown, City",
       "img":"img/ticket.png",
       "status": "Free",
-      "link": ""
+      "link": "test11/index.html"
     },
     {
       "id": 8,
       "title": "#Work, Study",
       "img":"img/ticket4.png",
-      "status": "<i class='fa fa-lock'></i>",
+      "status": "Soon",
       "link": ""
     },
     {
