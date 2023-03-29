@@ -37,7 +37,7 @@
     },
     {
       "id": 6,
-      "title": "#Freetime, Lifestyle",
+      "title": "#Freetime, Life",
       "img":"img/free.png",
       "status": "Free",
       "link": "test1/index.html"
@@ -97,6 +97,13 @@
       "img":"https://storage.googleapis.com/smalltalk2/assets/ticket-35.png",
       "status": "Free",
       "link": "test14/index.html"
+    },
+    {
+      "id": 15,
+      "title": "#Lifestyle, Company",
+      "img":"https://storage.googleapis.com/smalltalk2/assets/ModernArt-CreativePeople.png",
+      "status": "Free",
+      "link": "test15/index.html"
     }
   ]
 }
