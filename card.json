@@ -18,7 +18,7 @@
       "id": 3,
       "title": "#Cinema, Special Event",
       "img":"img/ticket6.png",
-      "status": "Free",
+      "status": "Soon",
       "link": ""
     },
     {
@@ -60,7 +60,7 @@
       "id": 9,
       "title": "#Leisure, Sport",
       "img":"img/ticket6.png",
-      "status": "<i class='fa fa-lock'></i>",
+      "status": "Soon",
       "link": ""
     },
     {
