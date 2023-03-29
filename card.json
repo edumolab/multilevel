@@ -51,10 +51,10 @@
     },
     {
       "id": 8,
-      "title": "#Work, Study",
-      "img":"img/ticket4.png",
-      "status": "Soon",
-      "link": ""
+      "title": "#Study, Teaching",
+      "img":"https://img.freepik.com/free-vector/graduation-cap-diploma-with-seal-3d-icon-hat-with-tassel-paper-scroll-with-badge-3d-vector-illustration-white-background-education-graduation-success-concept_74855-26002.jpg",
+      "status": "Free",
+      "link": "test16/index.html"
     },
     {
       "id": 9,
