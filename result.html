@@ -208,13 +208,14 @@ mark{
   background-color:rgb(250, 235, 215);
 }
 
-
+.btn-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top:30px;
+}
 
 .subscribe-btn{
-  position:absolute;
-  top:50px;
-  left:50%;
-  transform: translate(-50%, 50px);
  padding: 8px 20px;
  border: 1px solid dodgerblue;
  border-radius: 30px;
@@ -231,8 +232,9 @@ mark{
 	</style>
 </head>
 <body>
+  <div class="btn-container">
    <a href="https://t.me/speakingMulti" target="_blank"><button class="subscribe-btn"><i class="fab fa-telegram"></i>&nbsp; &nbsp;Join in Our Telegram Group</button></a>
-
+  </div>
 <div class="wait">	
 <div class="loader">
     <span class="loader-text">Please Wait...</span>
