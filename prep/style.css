@@ -51,13 +51,10 @@ a{
     position: fixed;
     bottom: 0;
     left: 0;
-    color:white;
-    background-color: dodgerblue;
+    background-color: rgb(231, 231, 231);
 }
 
-.footer-menu>a{
-    color:white;
-}
+
 
 .divider{
     
