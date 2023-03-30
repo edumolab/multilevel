@@ -338,14 +338,14 @@ mark{
       
       function scoreAnalyzer(){
       let min = 38;
-      let max = 63;
+      let max = 68;
       let randomBand = Math.floor(Math.random() * (max - min + 1)) + min;
       var randomIndex = Math.floor(Math.random() * scores.length);
       var randomScore = scores[randomIndex];
 
       var score = document.getElementById("score");
       var commentary=document.getElementById("display")
-      score.innerHTML = "Your Score: " + randomBand+"/72"
+      score.innerHTML = "Your Score: " + randomBand+"/75"
       commentary.innerHTML=randomScore.comment
  };
  
