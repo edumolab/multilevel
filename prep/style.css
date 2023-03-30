@@ -51,7 +51,8 @@ a{
     position: fixed;
     bottom: 0;
     left: 0;
-    background-color: white;
+    color:white
+    background-color: dodgerblue;
 }
 
 .divider{
