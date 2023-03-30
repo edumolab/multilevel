@@ -55,6 +55,10 @@ a{
     background-color: dodgerblue;
 }
 
+.footer-menu>a{
+    color:white;
+}
+
 .divider{
     
     border: 1px solid rgb(241, 241, 241);
