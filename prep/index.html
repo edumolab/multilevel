@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsenui.css">
+    <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsen-css-components.min.css">
+    <script src="https://unpkg.com/onsenui/js/onsenui.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <title>Multi-Level Practice | Edumo</title>
+</head>
+<body>
+    <ons-page>
+        <ons-toolbar>
+          <div class="center">Topics</div>
+        </ons-toolbar>
+       <ons-list>
+                    <ons-list-item onclick="testOne()"><span class="badge">1</span>Life & Lifestyle<span class="note">Avaible</span></ons-list-item>
+                    <ons-list-item><span class="badge">2</span>Reading & Education <span class="note">Soon</span></ons-list-item>
+                    <ons-list-item><span class="badge">3</span>TV & Business <span class="note">Soon</span></ons-list-item>
+                    <ons-list-item><span class="badge">4</span>Ads & Art <span class="note">Soon</span></ons-list-item>
+                    <ons-list-item><span class="badge">5</span>Technology & Life <span class="note">Soon</span></ons-list-item>
+                    <ons-list-item><span class="badge">6</span>Life & Freetime<span class="note">Soon</span> </ons-list-item>
+                    </ons-list>
+            
+    </ons-page>
+    <div class="footer-menu">
+            <div class=" menu active"><a class="link" href="index.html"> <i class="fa fa-home"></i>&nbsp; &nbsp;Home</a></div>
+            <div class="divider"></div>
+            <div class=" menu "><a class="link" href="discuss.html"><i class="fa fa-comments-o"></i>&nbsp; &nbsp;Discuss</a></div>
+    </div>  
+    <script>
+        function testOne(){
+            window.location.href="q1.html"
+        }
+    </script>
+</body>
+</html>

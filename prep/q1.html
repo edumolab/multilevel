@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questions</title>
+    <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsenui.css">
+<link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsen-css-components.min.css">
+<script src="https://unpkg.com/onsenui/js/onsenui.min.js"></script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <body>
+        <ons-page>
+
+            <ons-navigator swipeable id="myNavigator" page="page1.html"></ons-navigator>
+
+<template id="page1.html">
+  <ons-page id="page1">
+    <ons-toolbar>
+      <a class="home" href="index.html"><button style="border-radius:0">Home</button></a>
+      <div class="center">Part 1</div>
+    </ons-toolbar>
+<div class="container">
+<h3>What do you do in your free time?</h3>
+<p>I love reading and writing when I have some free time available. Apart from these, I also like playing badminton. So, whenever I do get time, I usually read, write or play badminton.</p>
+<h3>Do you have a busy social life?</h3>
+<p>Yes, I do have quite a busy social life as I have a lot of friends with whom I often meet sometimes to celebrate someone's birthday or other important events. Even I love to intermingle with like-minded people in social gatherings.</p>
+<h3>Has your life changed much in the last year?</h3>
+<p>Yeah, in certain aspects. Last year I was out of the job due to covid, but this year I’m gainfully employed. I also own a business, and I live independent now, whereas last year, I was dependent on my sister.</p>
+<h3>What would you like to change about your lifestyle?</h3>
+<p>I want to cultivate a habit of early sleeping because it will not only help me to wake up early in the morning but will also help me to strike a balance between my professional and personal life.</p>
+<h3>Do you enjoy your current stage of life</h3>
+<p>Definitely! I’m so blessed to have parents who are supportive of me financially and emotionally. They support all my endeavors, especially my mom, she’s my greatest cheerleader and I can’t thank her enough. I don’t know what my life would be like without them.</p>
+<ons-button id="push-button" style="padding: 5px 25px; float: right; margin: 10px 0;">Next</ons-button>
+</div>
+   
+  </ons-page>
+</template>
+
+<template id="page2.html">
+  <ons-page id="page2">
+    <ons-toolbar>
+      <div class="left"><ons-back-button>Part1</ons-back-button></div>
+      <div class="center">Part 2</div>
+    </ons-toolbar>
+<div class="container">
+<h3>Describe a healthy lifestyle you know.</h3>
+  <p>You should say:
+    <ul>
+      <li>What is it?</li>
+       <li>How do you know it?</li>
+       <li>When do you do it?</li>
+       <li>And explain why you think it is healthy</li>
+    </ul>
+    </p>
+    <p>These days, people have become highly health-conscious as they are investing a lot of time and effort in keeping healthy and fit.<br />
+      Here, I would like to put some light on a healthy lifestyle that is effective and can
+      be followed effortlessly.</p>
+      <p>I have been feeling inactive and sluggish for the last few weeks, which has
+      affected my productivity levels. During this time, I was scrounging through ways to
+      get out of this monotonous phase. Scrolling through the internet, I stumbled upon
+      an article on a healthy lifestyle. It emphasized taking a morning walk to stay active
+      and fit. Reading through its pros, I realized that it was time to give it a try.
+      So, I have started visiting a local park in the morning for the last few days. Once
+      there, I take a brisk walk, breathe in the fresh air and spend some time lying on
+      the lush green grass.</p>
+      <p>So far, I have noticed minor but significant changes in myself. I have started being
+      mentally fit along with physical fitness. Simultaneously, I have also started
+      consuming a healthy diet comprising dairy products, fresh fruits and green
+      vegetables. It has helped me get out of the exhaustive phase and improved my
+      concentration levels. Therefore, I think it is healthy and can be taught easily in our
+      daily lives.</p>
+<ons-button id="push-button" style="padding: 5px 25px; float: right; margin: 10px 0;">Part 3</ons-button>
+</div>
+    
+  </ons-page>
+</template>
+<template id="page3.html">
+    <ons-page id="page3">
+      <ons-toolbar>
+        <div class="left"><ons-back-button>Part 2</ons-back-button></div>
+        <div class="center">Part 3</div>
+      </ons-toolbar>
+      <div class="container">
+  <h3>What are some ways that people can quickly make their lives better?</h3>
+  <p>There are a few different approaches to rapidly improving a person’s lifestyle, such as
+    buying some useful luxury items, like the Tesla I just mentioned. And, another one that
+    comes to mind is eating healthier as this seems to help energy and positive mood in just
+    a matter of days.</p>
+    <h3>What are the best ways to achieve these?</h3>
+    <p>Through working diligently and smartly people can earn lots of money which in turn they
+      can wisely invest into products that improve their overall well-being, such as the 120K
+      dollar Tesla that I talk about. In the case of improving one’s diet, this has to be a
+      conscientious decision, and a person has to make clear plan and shop and cook accordingly.</p>
+      <h3>Do you agree that we learn best from our mistakes?</h3>
+      <p>People say that the mistakes we make are our best teachers because they can teach
+        us many things. In fact, some of the most important life lessons, we would ever learn,
+        will be from our mistakes or bad decisions.</p>
+        <h3>What’s the best way to gain experience in life?</h3>
+        <p>Well, in my opinion, the best way to gain experience is to do some experimentations,
+          and take some calculated risks and random decisions even when we know that we
+          would probably “fail” in some real-life situations. And, as we make those little
+          experimentations or make random decisions, we can reflect on the outcomes or
+          experiences, whether we fail or succeed.</p>
+          <a href="https://multilevel.vercel.app/test1/part1.html" target="_blank"><button>Start Practising</button></a>
+        </div>
+        
+    </ons-page>
+  </template>
+        </ons-page>
+      </body>
+      
+    <script src="js/onsenui.min.js"></script>
+    <script>
+       document.addEventListener('init', function(event) {
+  var page = event.target;
+
+  if (page.id === 'page1') {
+    page.querySelector('#push-button').onclick = function() {
+      document.querySelector('#myNavigator').pushPage('page2.html', {data: {title: 'Page 2'}});
+    };
+  }
+  else if (page.id === 'page2') {
+    page.querySelector('#push-button').onclick = function() {
+      document.querySelector('#myNavigator').pushPage('page3.html', {data: {title: 'Page 3'}});
+    };
+  } else if (page.id === 'page3') {
+    page.querySelector('ons-toolbar .center').innerHTML = page.data.title;
+  }
+});
+    </script>
+</body>
+</html>

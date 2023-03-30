@@ -1,0 +1,73 @@
+.container{
+    width:80%;
+    margin:0 10%;
+  }
+  p{
+    text-align: justify;
+  }
+
+  button{
+    background: dodgerblue;
+    color:white;
+    padding:10px 50px;
+    border: 1px solid dodgerblue;
+    border-radius: 30px;
+  }
+
+  .link{
+    text-decoration: none;
+    color: dodgerblue;
+}
+
+.home{
+    color: white;
+    text-align: left;
+    text-decoration: none;
+    font-size: 17px;
+    padding: 4px;
+}
+
+.badge{
+    border: 1px solid #00ff00;
+    border-radius: 50%;
+    background: #00ff00;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0 10px 0 0;
+    padding: 8px 12px;
+}
+
+a{
+    text-decoration: none;
+}
+
+.footer-menu{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 60px;
+    z-index: 3;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+}
+
+.divider{
+    
+    border: 1px solid rgb(241, 241, 241);
+    background: rgb(219, 219, 219);
+    height: 80%;
+}
+
+.note{
+    position: relative;
+    top: 0;
+    padding: 1px 5px;
+    border: 1px solid rgb(235, 8, 95);
+    border-radius:30px ;
+    color: white;
+    left:13%;
+    background-color: rgb(235, 8, 95);
+}
