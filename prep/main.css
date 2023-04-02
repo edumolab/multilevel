@@ -89,8 +89,8 @@
             background: dodgerblue;
             color: white;
             z-index:5 ;
-            box-shadow: 0 0 6px rgb(238, 238, 238);
-            backdrop-filter: blur(10px);
+            box-shadow: 0 0 6px rgb(0, 119, 255);
+            
         }
 
 .header{
