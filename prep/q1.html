@@ -5,12 +5,97 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Questions</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsenui.css">
 <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsen-css-components.min.css">
 <script src="https://unpkg.com/onsenui/js/onsenui.min.js"></script>
 <link rel="stylesheet" href="style.css">
+<style>
+  *{
+      margin: 0;
+      padding: 0;
+  }
+  button{
+      cursor: pointer;
+  }
+
+  #record{
+      background: white;
+      color: black;
+      padding: 6px 12px;
+      border: 1px solid white;
+      border-radius: 30px;
+  }
+
+   #stop{
+      background: orange;
+      color: white;
+      padding: 6px 12px;
+      border: 1px solid orange;
+      border-radius: 30px;
+  }
+
+  #bar{
+      width: 100%;
+      height: 60px;
+      background: rgb(2,205,90);
+      border: 1px solid transparent;
+      border-top-left-radius: 6px;
+      border-top-right-radius:6px;
+      display: flex;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      justify-content: center;
+      align-items: center;
+      margin-top: 150px;
+      user-select: none;
+ }
+  #player{
+      user-select: none;
+      margin-top: 150px;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 60px;
+      background: dodgerblue;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+  
+  #save{color: white;
+  }
+
+  .text-icon{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      font-size: 16px;
+      padding: 10px;
+      cursor: pointer;
+  }
+
+  .mic{
+      position: fixed;
+      cursor: pointer;
+      right: 15px;
+      bottom: 70px;
+      font-size: 26px;
+      padding: 7px 12px;
+      border: 2px solid blue;
+      border-radius: 50%;
+      background: dodgerblue;
+      color: white;
+  }
+
+  
+
+</style>
 </head>
-<body>
     <body>
         <ons-page>
 
@@ -34,6 +119,28 @@
 <h3>Do you enjoy your current stage of life</h3>
 <p>Definitely! I’m so blessed to have parents who are supportive of me financially and emotionally. They support all my endeavors, especially my mom, she’s my greatest cheerleader and I can’t thank her enough. I don’t know what my life would be like without them.</p>
 <ons-button id="push-button" style="padding: 5px 25px; float: right; margin: 30px 0;">Next</ons-button>
+<button class="mic"><i class="fa fa-microphone"></i></button>    
+<div id="bar">
+    <div class="status-bar">
+    <button id="record">Record answer</button>
+    </div>
+    <button id="stop">Stop record...</button>
+</div>
+<div id="player">
+    <div class="text-icon">
+    <a href="" download="" id="save"><i class="fa fa-save"></i></a>
+    <p>Save</p>
+    </div>
+    <div class="text-icon">
+    <i id="play" class="fa fa-play-circle"></i>
+    <p>Listen</p>
+</div>
+<div class="text-icon">
+    <i id="cancel" class="fa fa-times-circle"></i>
+    <p>Cancel</p>
+</div>
+</div>
+<audio src="" id="preview" controls></audio>
 </div>
    
   </ons-page>
@@ -131,5 +238,6 @@
   }
 });
     </script>
+    <script src="player.js"></script>
 </body>
 </html>
