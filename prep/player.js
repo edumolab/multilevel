@@ -54,7 +54,10 @@ document.getElementById("play").addEventListener("click", function(){
     }
 });
 
-
+function hiddenIcon(){
+    document.getElementById("play").classList.remove("fa-pause-circle");
+    document.getElementById("play").classList.add("fa-play-circle");
+};
     
 //Start Btn recStart
 recBtn.addEventListener("click", function(){
