@@ -2,7 +2,7 @@
      const questions = {
   "1": {
     "id":"8",
-    "question": "In your opinion, is technology makeing people's lives easier?",
+    "question": "In your opinion, is technology making people's lives easier?",
     "audio_url": "audio/1.mp3"
   },
   "2": {
