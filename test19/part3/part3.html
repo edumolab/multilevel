@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Multi Level Exam | Speaking</title>
+  <link href="css/bootstrap.min.css" rel="stylesheet" >
+<script src="js/bootstrap.bundle.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="css/style.css">
+<script src="js/jquery-3.6.4.min.js"></script>
+<link rel="stylesheet" href="css/modal.css">
+<style>
+  
+
+</style>
+</head>
+<body>
+  <!-----------
+  <div id="welcome_note">
+    <div class="text-box">
+      
+    <h2 class="h2 text-dark">Part 3</h2>
+    <ul>
+      <li>Questions №:<b> 5 questions</b></li>
+    </ul>
+  </div>
+    <button class="startBtn shadow-lg">Start Exam</button>
+  </div>
+  --------->
+  <!---Page-1-->
+  <main id="pgone">
+  <div class="container-fluid py-2 shadow-sm text-center d-flex align-center justify-content-center">
+ <h4 class="text-dark">Multi Level Speaking Section</h4>
+   </div>
+ <div class="text-center mt-5">
+   <span class="level-one fw-bold text-light mx-3 rounded px-4"><i class="fa fa-check"></i></span>
+   <span class="level-two-ended fw-bold text-light mx-3 rounded px-4"><i class="fa fa-check"></i></span>
+   <span class="level-three fw-bold text-light mx-3 rounded">Part 3</span>
+ </div>
+
+<section class="container my-3 pt-2 shadow-sm border-1" style="border: 1px solid lightgrey; border-radius: 5px;">
+<div class="row">
+  <div class="col-md-5 py-3">
+    <div class="card">
+      <div class="card-body">
+        <div class="header-question d-flex justify-content-between align-items-center">
+          <span class="badge rounded-pill text-bg-primary border-0 px-5 py-2">Question# <span id="que-id"></span></span>
+          <div>
+          <i class="fa fa-volume-up text-primary mx-1"></i><input type="range" id="audio_volume" min="0" max="1" step="0.01" name=""></div>
+        </div>
+        <hr>
+        <div class=" quiz-container mt-3 d-flex justify-content-center align-items-center">
+          <button class="btn btn-primary px-3 py-1 mx-3" onclick="sizeDown()">A-</button>
+           <button class="btn btn-primary px-3 py-1 mx-3" onclick="sizeUp()">A+</button>
+        </div>
+        <hr>
+        <div id="question-bar">
+        </div>
+        <audio src="beep.mp3" id="beep" volume="0.5"></audio>
+      </div>
+    </div>
+  </div>
+  <!----Right side--->
+  <div class="col-md-7 py-3">
+    <div class="card" id="card">
+      <div class="card-body">
+        <div class="header-question d-flex justify-content-around align-items-center">
+          <button class="btn btn-primary w-100 fw-bold py-1"><span class="h5" id="timer"></span></button>
+        </div>
+        <div class="recorder">
+        <span class="circle text-center"></span>
+        <p id="recording"></p>
+        <img id="visualizer" src="js/waveform.gif" width="70%" height="100px">
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+<div class="modal-fade" style="display: none;">
+  <div class="modal-dialog" style="display: none;">
+      <div class="modal-content">
+        <h3>Thanks for your attendence!</h3>
+        <p class="important">Your result will be announced soon.</p>
+        <a href="../../index.html"><button class="btn-link text-white">Home Page</button></a>
+      </div>
+  </div>
+</div>
+</main>
+
+
+<!---Page two---
+
+<div id="redirect" class="d-flex justify-content-center align-items-center" style="flex-direction: column;">
+<h2 class="h2 text-dark">Part 2</h2>
+    <ul>
+      <li>Question Type: <b>Cue Card</b></li>
+      <li>Preparation Time: <b>1 minute</b></li>
+      <li>For Speaking: <b>2 minutes</b></li>
+    </ul>
+</h2>  
+<button class="btn btn-dark px-5" onclick="window.location.href='li.html'">Start</button>  
+</div>
+----->
+<script src="js/main.js"></script>
+<script src="js/quiz.js"></script>
+<script src="js/jquery-3.6.4.min.js"></script>
+</body>
+</html>
