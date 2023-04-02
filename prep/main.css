@@ -1,0 +1,162 @@
+*{
+            margin: 0;
+            padding: 0;
+         
+        }
+
+        body{
+          background: #efeff4;
+        }
+
+        .container{
+         width: 80%;
+         margin: 90px 10%;
+        }
+
+        button{
+            cursor: pointer;
+        }
+
+        #record{
+            background: white;
+            color: black;
+            padding: 6px 12px;
+            border: 1px solid white;
+            border-radius: 30px;
+        }
+
+         #stop{
+            background: orange;
+            color: white;
+            padding: 6px 12px;
+            border: 1px solid orange;
+            border-radius: 30px;
+        }
+
+        #bar{
+            width: 100%;
+            height: 60px;
+            background: rgb(2,205,90);
+            border: 1px solid transparent;
+            border-top-left-radius: 6px;
+            border-top-right-radius:6px;
+            display: flex;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            justify-content: center;
+            align-items: center;
+            margin-top: 150px;
+            user-select: none;
+       }
+        #player{
+            user-select: none;
+            margin-top: 150px;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 60px;
+            background: dodgerblue;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        #save{color: white;
+        }
+
+        .text-icon{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            font-size: 16px;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .mic{
+            position: fixed;
+            cursor: pointer;
+            right: 15px;
+            bottom: 70px;
+            font-size: 26px;
+            padding: 7px 12px;
+            border: 2px solid blue;
+            border-radius: 50%;
+            background: dodgerblue;
+            color: white;
+            z-index:5 ;
+        }
+
+.header{
+ position: fixed;
+ z-index: 3;
+ top: 0;
+ left: 0;
+ width: 100%;
+ display: flex;
+ flex-direction: row;
+ justify-content: space-between;
+ align-items: center;
+ height: 50px;
+ border:none;
+ border-bottom: 1px solid lightslategray;
+ background: #fff;
+ box-shadow: 0 2px 3px #adadaddb;
+}
+
+.center{
+ text-align: center;
+}
+
+.right{
+ width: 27%;
+}
+
+.back{
+ margin: 0 30px;
+ color: dodgerblue;
+ font-size: 23px;
+ cursor: pointer;
+
+}
+
+.practise{
+    background: dodgerblue;
+    color:white;
+    padding:10px 50px;
+    border: 1px solid dodgerblue;
+    border-radius: 30px;
+    margin: 30px 0;
+}
+
+.push-button{
+ border: 1px solid dodgerblue;
+ background: dodgerblue;
+ color:white;
+ padding: 30px;
+ border-radius: 3px;
+}
+
+h3{
+    font-weight: 600;
+    margin: 0.6em 0;
+    padding: 0;
+    font-size: 24px;
+}
+
+p{
+    display: block;
+    font-size: 18px;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+li{
+ font-size: 17px;
+}

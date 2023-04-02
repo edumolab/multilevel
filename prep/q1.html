@@ -4,24 +4,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Questions</title>
-    <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsenui.css">
-<link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsen-css-components.min.css">
-<script src="https://unpkg.com/onsenui/js/onsenui.min.js"></script>
-<link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Css Colors</title>
 </head>
 <body>
-    <body>
-        <ons-page>
 
-            <ons-navigator swipeable id="myNavigator" page="page1.html"></ons-navigator>
-
-<template id="page1.html">
-  <ons-page id="page1">
-    <ons-toolbar>
-      <a class="back" href="index.html"><i class="fa fa-arrow-left"></i></a>
-      <div class="center">Part 1</div>
-    </ons-toolbar>
+<div id="page1">
+<div class="header">   
+     <a class="back" href="index.html"><i class="fa fa-arrow-left"></i></a>
+     <div class="left"></div>
+      <div class="center"><h3>Part 1</h3></div>
+      <div class="right"></div>
+</div>
 <div class="container">
 <h3>What do you do in your free time?</h3>
 <p>I love reading and writing when I have some free time available. Apart from these, I also like playing badminton. So, whenever I do get time, I usually read, write or play badminton.</p>
@@ -33,18 +28,17 @@
 <p>I want to cultivate a habit of early sleeping because it will not only help me to wake up early in the morning but will also help me to strike a balance between my professional and personal life.</p>
 <h3>Do you enjoy your current stage of life</h3>
 <p>Definitely! I’m so blessed to have parents who are supportive of me financially and emotionally. They support all my endeavors, especially my mom, she’s my greatest cheerleader and I can’t thank her enough. I don’t know what my life would be like without them.</p>
-<ons-button id="push-button" style="padding: 5px 25px; float: right; margin: 30px 0;">Next</ons-button>
+<button onclick="openTwo()" class="push-button" style="padding: 10px 30px; float: right; margin: 30px 0;">Next</button>
 </div>
-   
-  </ons-page>
-</template>
-
-<template id="page2.html">
-  <ons-page id="page2">
-    <ons-toolbar>
-      <div class="left"><ons-back-button>Part1</ons-back-button></div>
-      <div class="center">Part 2</div>
-    </ons-toolbar>
+</div>
+<!-----page two--->
+<div id="page2">
+<div class="header">   
+     <a class="back" onclick="openOne()"><i class="fa fa-arrow-left"></i></a>
+     <div class="left"></div>
+      <div class="center"><h3>Part 2</h3></div>
+      <div class="right"></div>
+</div>
 <div class="container">
 <h3>Describe a healthy lifestyle you know.</h3>
   <p>You should say:
@@ -72,19 +66,21 @@
       vegetables. It has helped me get out of the exhaustive phase and improved my
       concentration levels. Therefore, I think it is healthy and can be taught easily in our
       daily lives.</p>
-<ons-button id="push-button" style="padding: 5px 25px; float: right; margin: 30px 0;">Part 3</ons-button>
+<button onclick="openThree()" class="push-button" style="padding: 10px 30px; float: right; margin: 30px 0;">Next</button>
 </div>
-    
-  </ons-page>
-</template>
-<template id="page3.html">
-    <ons-page id="page3">
-      <ons-toolbar>
-        <div class="left"><ons-back-button>Part 2</ons-back-button></div>
-        <div class="center">Part 3</div>
-      </ons-toolbar>
-      <div class="container">
-  <h3>What are some ways that people can quickly make their lives better?</h3>
+</div>
+
+<!----Page3---->
+
+<div id="page3">
+<div class="header">   
+     <a class="back" onclick="openTwo()"><i class="fa fa-arrow-left"></i></a>
+     <div class="left"></div>
+      <div class="center"><h3>Part 3</h3></div>
+      <div class="right"></div>
+</div>
+<div class="container">
+<h3>What are some ways that people can quickly make their lives better?</h3>
   <p>There are a few different approaches to rapidly improving a person’s lifestyle, such as
     buying some useful luxury items, like the Tesla I just mentioned. And, another one that
     comes to mind is eating healthier as this seems to help energy and positive mood in just
@@ -104,32 +100,54 @@
           would probably “fail” in some real-life situations. And, as we make those little
           experimentations or make random decisions, we can reflect on the outcomes or
           experiences, whether we fail or succeed.</p>
-          <a href="https://multilevel.vercel.app/test1/part1.html" target="_blank"><button>Start Practising</button></a>
+          <a href="https://multilevel.vercel.app/test1/part1.html" target="_blank"><button class="practise">Start Practising</button></a>
         </div>
-        
-    </ons-page>
-  </template>
-        </ons-page>
-      </body>
-      
-    <script src="js/onsenui.min.js"></script>
-    <script>
-       document.addEventListener('init', function(event) {
-  var page = event.target;
+</div>
 
-  if (page.id === 'page1') {
-    page.querySelector('#push-button').onclick = function() {
-      document.querySelector('#myNavigator').pushPage('page2.html', {data: {title: 'Page 2'}});
-    };
-  }
-  else if (page.id === 'page2') {
-    page.querySelector('#push-button').onclick = function() {
-      document.querySelector('#myNavigator').pushPage('page3.html', {data: {title: 'Page 3'}});
-    };
-  } else if (page.id === 'page3') {
-    page.querySelector('ons-toolbar .center').innerHTML = page.data.title;
-  }
-});
-    </script>
+
+<!---Mic starts here---->
+<button class="mic"><i class="fa fa-microphone"></i></button>    
+<div id="bar">
+    <div class="status-bar">
+    <button id="record">Record answer</button>
+    </div>
+    <button id="stop">Stop record...</button>
+</div>
+<div id="player">
+    <div class="text-icon">
+    <a href="" download="" id="save"><i class="fa fa-save"></i></a>
+    <span>Save</span>
+    </div>
+    <div class="text-icon">
+    <i id="play" class="fa fa-play-circle"></i>
+    <span>Listen</span>
+</div>
+<div class="text-icon">
+    <i id="cancel" class="fa fa-times-circle"></i>
+    <span>Cancel</span>
+</div>
+</div>
+<audio src="" id="preview" controls></audio>
+
+<script src="player.js"></script>
+<script>
+    function openOne(){
+    document.getElementById("page1").style.display="block"
+    document.getElementById("page2").style.display="none"
+    document.getElementById("page3").style.display="none";
+}
+    function openTwo(){
+        document.getElementById("page2").style.display="block"
+    document.getElementById("page1").style.display="none";
+    document.getElementById("page3").style.display="none"
+    }
+
+    function openThree(){
+        document.getElementById("page2").style.display="none"
+    document.getElementById("page1").style.display="none";
+    document.getElementById("page3").style.display="block"
+    }
+    openOne()
+</script>
 </body>
 </html>
