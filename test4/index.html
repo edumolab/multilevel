@@ -181,6 +181,7 @@ function sendData() {
       messageBox.style.color="#00ff00";
       forma.style.display="none";
       nextBtn.style.display="block";
+      document.querySelector(".note").style.display="none";
       if (!response.ok) {
         throw new Error('Failed to send message');
         messageBox.innerHTML="Oh, Failed!";
