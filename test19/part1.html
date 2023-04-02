@@ -8,10 +8,15 @@
 <script src="js/bootstrap.bundle.min.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <link rel="stylesheet" href="css/style.css">
-<style>
-  
-
-</style>
+<script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" defer></script>
+<script>
+  window.OneSignal = window.OneSignal || [];
+  OneSignal.push(function() {
+    OneSignal.init({
+      appId: "55d2770f-bab2-45ac-a306-9216cd0d6da1",
+    });
+  });
+</script>
 </head>
 <body>
   <!----------
