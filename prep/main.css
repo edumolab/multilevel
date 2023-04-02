@@ -89,7 +89,7 @@
             background: dodgerblue;
             color: white;
             z-index:5 ;
-            box-shadow: 0 0 6px rgba(187, 187, 187, 0.671);
+            box-shadow: 0 0 6px rgb(238, 238, 238);
         }
 
 .header{
