@@ -7,7 +7,7 @@
   "orientation": "portrait",
   "scope": "/sw.js",
   "short_name": "Multilevel SpeakApp",
-  "start_url": "index.html",
+  "start_url": "/index.html",
   "theme_color": "#ffffff",
   "categories": [],
   "screenshots": [],
