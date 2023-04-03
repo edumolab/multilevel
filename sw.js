@@ -13,7 +13,48 @@ self.addEventListener('install',  function (e) {
       console.log("CACHING /INDEX.HTML");
       return cache.addAll(
         [
-          '/index.html' // == https://legends.io
+          '/index.html', // == https://legends.io
+          '/card.json',
+          '/result.html',
+          '/prep/index.html',
+          '/prep/q1.html',
+          '/prep/q2.html',
+          '/prep/player.js',
+          '/prep/jquery-3.10.0.slim.min.js',
+          '/prep/articulate.js',
+          '/prep/main.css',
+          '/prep/style.css',
+          '/test1/index.html',
+          '/test1/part1.html',
+          '/test1/verify.html',
+          '/test2/index.html',
+          '/test2/part1.html',
+          '/test2/verify.html',
+          '/test3/index.html',
+          '/test3/part1.html',
+          '/test3/verify.html',
+          '/test4/index.html',
+          '/test4/part1.html',
+          '/test4/verify.html',
+          '/test5/index.html',
+          '/test5/part1.html',
+          '/test5/verify.html',
+          '/test6/index.html',
+          '/test6/part1.html',
+          '/test6/verify.html',
+          '/img/busi.png',
+          '/img/free.png',
+          '/img/q.png',
+          '/img/part2.png',
+          '/img/reading.png',
+          '/img/ticket-24.png',
+          '/img/ticket.png',
+          '/img/ticket2.png',
+          '/img/ticket4.png',
+          '/img/ticket5.png',
+          '/img/ticket6.png',
+          '/index.js'
+
         ]
       );
     })
