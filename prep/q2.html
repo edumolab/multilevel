@@ -4,135 +4,214 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Questions</title>
-    <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsenui.css">
-<link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsen-css-components.min.css">
-<script src="https://unpkg.com/onsenui/js/onsenui.min.js"></script>
-<link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>TV & Adverts</title>
 </head>
 <body>
-    <body>
-        <ons-page>
 
-            <ons-navigator swipeable id="myNavigator" page="page1.html"></ons-navigator>
-
-<template id="page1.html">
-  <ons-page id="page1">
-    <ons-toolbar>
-      <a class="back" href="index.html"><i class="fa fa-arrow-left"></i></a>
-      <div class="center">Part 1</div>
-    </ons-toolbar>
+<div id="page1">
+<div class="header">   
+     <a class="back" href="index.html"><i class="fa fa-arrow-left"></i></a>
+     <div class="left"></div>
+      <div class="center"><h3>Part 1</h3></div>
+      <div class="right"></div>
+</div>
 <div class="container">
+  <i class="fas fa-volume-up" onclick="speak('div.que1')"></i>
+  <div class="que1">
 <h3>Do you like watching TV?</h3>
 <p>I don't get time really to watch television and I don't like the fact that you have no choice about what to watch, so no I would say I don't really like watching normal television, I much prefer streaming something on my iPad and watching it when I like.</p>
+</div>
+<i class="fas fa-volume-up" onclick="speak('div.que2')"></i>
+<div class="que2">
 <h3>How often do you watch TV?</h3>
 <p>I don’t really watch television that often unless I want to know about some specific news or incidents, mainly because I have to stay occupied with my office works and other things most of the times, which are more important to me and my family than watching the television.</p>
+</div>
+<i class="fas fa-volume-up" onclick="speak('div.que3')"></i>
+<div class="que3">
 <h3>What kind of TV programs do you like to watch?</h3>
 <p>Well, I'm interested in watching TV drama series and reality shows. I feel they are a good source of entertainment, giving people minutes of relaxation after a stressful day.</p>
+</div>
+<i class="fas fa-volume-up" onclick="speak('div.que4')"></i>
+<div class="que4">
 <h3>What’s your favorite TV program?</h3>
 <p>There are many documentaries on TV related to architecture. Because I’m an architect. And they always introduce some new approaches to construction and the latest materials which can be used. I used to read book books. But now there are so many good videos online. I think they are more interesting and better.</p>
+</div>
+<i class="fas fa-volume-up" onclick="speak('div.que5')"></i>
+<div class="que5">
 <h3>Do you ever watch foreign programs or films?</h3>
 <p>I did enjoy quite a lot of shows and programs, from music, movies, fashion, news and scientific documentaries since the foreign are so good at visual editing and content management. Most of them are in English because I’m more familiar with this language compares to French or Japanese.</p>
-<h3>Has television changed your life in any way?</h3>
-<p>I think watching TV has become a habit that I would hardly change. My family always watch the news while having dinner together. Personally, I’d love watching TV for relaxing after studying as well as keeping myself updated on show-business, music, movies, landscape discoveries and fields of science. Thus as long as I do not become a couch potato, TV has always played an important role in my life,
-making my life more colorful and opening in front of my eyes the places I’ve never been to.</p>
-<ons-button id="push-button" style="padding: 5px 25px; float: right; margin: 10px 0;">Next</ons-button>
 </div>
-   
-  </ons-page>
-</template>
-
-<template id="page2.html">
-  <ons-page id="page2">
-    <ons-toolbar>
-      <div class="left"><ons-back-button>Part1</ons-back-button></div>
-      <div class="center">Part 2</div>
-    </ons-toolbar>
+<i class="fas fa-volume-up" onclick="speak('div.que6')"></i>
+<div class="que6">
+<h3>Has television changed your life in any way?</h3>
+<p>I think watching TV has become a habit that I would hardly change. My family always watch the news while having dinner together. Personally, I’d love watching TV for relaxing after studying as well as keeping myself updated on show-business, music, movies, landscape discoveries and fields of science. Thus as long as I do not become a couch potato, TV has always played an important role in my life, making my life more colorful and opening in front of my eyes the places I’ve never been to.</p>
+</div>
+<button onclick="openTwo()" class="push-button" style="padding: 10px 30px; float: right; margin: 30px 0;">Next</button>
+</div>
+</div>
+<!-----page two--->
+<div id="page2">
+<div class="header">   
+     <a class="back" onclick="openOne()"><i class="fa fa-arrow-left"></i></a>
+     <div class="left"></div>
+      <div class="center"><h3>Part 2</h3></div>
+      <div class="right"></div>
+</div>
 <div class="container">
-<h3>Describe a healthy lifestyle you know.</h3>
+<i class="fas fa-volume-up" onclick="speak('div.part2')"></i>
+<div class="part2">   
+<h3>Describe an advertisement that persuaded you to buy a product</h3>
   <p>You should say:
     <ul>
-      <li>What is it?</li>
-       <li>How do you know it?</li>
-       <li>When do you do it?</li>
-       <li>And explain why you think it is healthy</li>
+      <li>What advertisement it was</li>
+       <li>Was it shown on TV, radio or newspaper</li>
+       <li>What was good about that advertisement</li>
     </ul>
     </p>
-    <p>These days, people have become highly health-conscious as they are investing a lot of time and effort in keeping healthy and fit.<br />
-      Here, I would like to put some light on a healthy lifestyle that is effective and can
-      be followed effortlessly.</p>
-      <p>I have been feeling inactive and sluggish for the last few weeks, which has
-      affected my productivity levels. During this time, I was scrounging through ways to
-      get out of this monotonous phase. Scrolling through the internet, I stumbled upon
-      an article on a healthy lifestyle. It emphasized taking a morning walk to stay active
-      and fit. Reading through its pros, I realized that it was time to give it a try.
-      So, I have started visiting a local park in the morning for the last few days. Once
-      there, I take a brisk walk, breathe in the fresh air and spend some time lying on
-      the lush green grass.</p>
-      <p>So far, I have noticed minor but significant changes in myself. I have started being
-      mentally fit along with physical fitness. Simultaneously, I have also started
-      consuming a healthy diet comprising dairy products, fresh fruits and green
-      vegetables. It has helped me get out of the exhaustive phase and improved my
-      concentration levels. Therefore, I think it is healthy and can be taught easily in our
-      daily lives.</p>
-<ons-button id="push-button" style="padding: 5px 25px; float: right; margin: 10px 0;">Part 3</ons-button>
+    <p>In my opinion, most of the advertisements are merely a waste of time as they do
+not actually do any good for the common people. However, there was one
+advertisement that I suddenly came across, which persuaded me to think
+  otherwise.</p>
+<p>It is an advertisement about drinking tea. I came across such good content after a
+very long time. In my opinion, it was the best advertisement that I have seen so far.
+I think like that because it was created in a very realistic way to convey an
+understandable message through some conversation and simple jokes. For the
+  first time, I saw this advertisement on TV a few years back.</p>
+<p>In this tea advertisement, they made the set up very nicely that was giving a
+pleasant vibe. The stage was flawlessly set for a wonderful evening for four
+people, involving two husbands and two wives. They all were engrossed in talking
+and smiling with one another while enjoying a few snacks at the same time. So it
+  was time for hot tea to complete the wonderful evening.</p>
+<p>So in this scene, they were zooming on the brand while they were putting sugar in
+their cups. Then they noticed that one of the wives wasn't putting sugar in her tea.
+She was asked then what's wrong she smiled and replied I like to keep my sugar
+and husband under control.</p>
+<p>Everyone started laughing at the joke and with that scene the advertisement came
+to an end. It persuaded me to buy the product.</p>
+  </div>
+<button onclick="openThree()" class="push-button" style="padding: 10px 30px; float: right; margin: 30px 0;">Next</button>
 </div>
-    
-  </ons-page>
-</template>
-<template id="page3.html">
-    <ons-page id="page3">
-      <ons-toolbar>
-        <div class="left"><ons-back-button>Part 2</ons-back-button></div>
-        <div class="center">Part 3</div>
-      </ons-toolbar>
-      <div class="container">
-  <h3>What are some ways that people can quickly make their lives better?</h3>
-  <p>There are a few different approaches to rapidly improving a person’s lifestyle, such as
-    buying some useful luxury items, like the Tesla I just mentioned. And, another one that
-    comes to mind is eating healthier as this seems to help energy and positive mood in just
-    a matter of days.</p>
-    <h3>What are the best ways to achieve these?</h3>
-    <p>Through working diligently and smartly people can earn lots of money which in turn they
-      can wisely invest into products that improve their overall well-being, such as the 120K
-      dollar Tesla that I talk about. In the case of improving one’s diet, this has to be a
-      conscientious decision, and a person has to make clear plan and shop and cook accordingly.</p>
-      <h3>Do you agree that we learn best from our mistakes?</h3>
-      <p>People say that the mistakes we make are our best teachers because they can teach
-        us many things. In fact, some of the most important life lessons, we would ever learn,
-        will be from our mistakes or bad decisions.</p>
-        <h3>What’s the best way to gain experience in life?</h3>
-        <p>Well, in my opinion, the best way to gain experience is to do some experimentations,
-          and take some calculated risks and random decisions even when we know that we
-          would probably “fail” in some real-life situations. And, as we make those little
-          experimentations or make random decisions, we can reflect on the outcomes or
-          experiences, whether we fail or succeed.</p>
-          <a href="https://multilevel.vercel.app/test2/part1.html" target="_blank"><button>Start Practising</button></a>
-        </div>
-        
-    </ons-page>
-  </template>
-        </ons-page>
-      </body>
-      
-    <script src="js/onsenui.min.js"></script>
-    <script>
-       document.addEventListener('init', function(event) {
-  var page = event.target;
+</div>
 
-  if (page.id === 'page1') {
-    page.querySelector('#push-button').onclick = function() {
-      document.querySelector('#myNavigator').pushPage('page2.html', {data: {title: 'Page 2'}});
-    };
-  }
-  else if (page.id === 'page2') {
-    page.querySelector('#push-button').onclick = function() {
-      document.querySelector('#myNavigator').pushPage('page3.html', {data: {title: 'Page 3'}});
-    };
-  } else if (page.id === 'page3') {
-    page.querySelector('ons-toolbar .center').innerHTML = page.data.title;
-  }
-});
-    </script>
+<!----Page3---->
+
+<div id="page3">
+<div class="header">   
+     <a class="back" onclick="openTwo()"><i class="fa fa-arrow-left"></i></a>
+     <div class="left"></div>
+      <div class="center"><h3>Part 3</h3></div>
+      <div class="right"></div>
+</div>
+<div class="container">
+<i class="fas fa-volume-up" onclick="speak('div.que8')"></i>
+<div class="que8">   
+<h3>What makes an advertisement effective?</h3>
+  <p>There are a number of facts that makes an advertisement effective. To begin
+with, the advertisement on a particular product has to be absolutely relevant and
+specific on its message while also describing at the same time what exactly set
+the product apart from others in terms of its benefits. Besides, for an
+advertisement to be effective, the language or the wording has to be unique to the
+target audience, based on their age, gender, race, culture, religion and
+geographic location. Finally, the advertisement should include a clear “call for
+action” such as asking to buy the product or contact.</p>
+ </div>
+  <i class="fas fa-volume-up" onclick="speak('div.que9')"></i>
+<div class="que9">     
+    <h3>What is the purpose of advertising?</h3>
+    <p>For a given market segment, there are six main purposes of an
+advertisement, which include informing the consumers about a certain
+product and convince customers, changing the belief about a certain brand,
+enhance the image of the company, point out and create a need for
+products or services, generating new direct sales and announce new
+products and programs. Some advertisements may also want to
+demonstrate new uses for established products and send a reminder to use
+an existing product.</p>
+  </div>
+   <i class="fas fa-volume-up" onclick="speak('div.que10')"></i>
+<div class="que10">  
+      <h3>How have advertisements changed since you were a child?</h3>
+      <p>Advertisements have changed significantly over the years since I was a
+child. For a starter, when I was a child, if I remember correctly, there were
+only radio, TV and print media to show us the advertisements, but today
+there are computers, smartphones, Facebook, Twitter and Instagram also
+on which advertisements are being displayed continuously. We can also
+see billboards, neon signs, and other vibrant and visually captivating
+printed designs, that are placed at strategic locations with high volumes of
+human traffic, which were not seen when I was a child.</p>
+  </div>
+   <i class="fas fa-volume-up" onclick="speak('div.que11')"></i>
+<div class="que11">  
+        <h3>Do you think that advertisements should be strictly regulated?</h3>
+<p>Yes, I do think that advertisement should be strictly regulated because,
+without it, misleading information on the products will keep deceiving the
+customers into buying wrong and defected products. Besides, without strict
+regulation, bigger companies will always have undue advantages, because
+of their higher budget for advertisements, over the smaller and local
+manufacturers/companies even though the products of “bigger” companies
+are of inferior quality to those of smaller companies. In other words,
+advertisement kills competition and gives larger companies an unfair
+advantage over smaller companies.</p>
+    </div>
+    <i class="fas fa-volume-up" onclick="speak('div.que12')"></i>
+<div class="que12">  
+        <h3>How important is it for advertisers to tell the whole truth in advertisements?</h3>
+        <p>It is absolutely important for advertisers to tell the whole truth in advertisements for trust issues. Advertisers should tell customers exactly what they are buying or getting because if there is a discrepancy between the expectation of the customers and what the advertisers advertise, then the trust would be lost, and the customers most likely would never come back to buy the same products again in the future. Besides, some customers may also go as far as “suing” the company, if they think that they are lied to, which certainly is not good for the lasting image of a company.</p>
+    </div>    
+          <a href="https://multilevel.vercel.app/test1/part1.html" target="_blank"><button class="practise">Start Practising</button></a>
+        </div>
+</div>
+
+
+<!---Mic starts here---->
+<button class="mic"><i class="fa fa-microphone"></i></button>    
+<div id="bar">
+    <div class="status-bar">
+    <button id="record">Record answer</button>
+    </div>
+    <button id="stop">Stop record...</button>
+</div>
+<div id="player">
+    <div class="text-icon">
+    <a href="" download="" id="save"><i class="fa fa-save"></i></a>
+    <span>Save</span>
+    </div>
+    <div class="text-icon">
+    <i id="play" class="fa fa-play-circle"></i>
+    <span>Listen</span>
+</div>
+<div class="text-icon">
+    <i id="cancel" class="fa fa-times-circle"></i>
+    <span>Close</span>
+</div>
+</div>
+<audio src="" id="preview" controls onended="hiddenIcon()"></audio>
+
+<script src="player.js"></script>
+<script src="jquery-3.1.0.slim.min.js"></script>
+<script src="articulate.js"></script>
+<script>
+  function speak(obj) {
+  $(obj).articulate('speak');
+};
+    function openOne(){
+    document.getElementById("page1").style.display="block"
+    document.getElementById("page2").style.display="none"
+    document.getElementById("page3").style.display="none";
+}
+    function openTwo(){
+        document.getElementById("page2").style.display="block"
+    document.getElementById("page1").style.display="none";
+    document.getElementById("page3").style.display="none"
+    }
+
+    function openThree(){
+        document.getElementById("page2").style.display="none"
+    document.getElementById("page1").style.display="none";
+    document.getElementById("page3").style.display="block"
+    }
+    openOne()
+</script>
 </body>
 </html>
