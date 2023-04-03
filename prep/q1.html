@@ -18,16 +18,31 @@
       <div class="right"></div>
 </div>
 <div class="container">
+  <i class="fas fa-volume-up" onclick="speak('div.que1')"></i>
+  <div class="que1">
 <h3>What do you do in your free time?</h3>
 <p>I love reading and writing when I have some free time available. Apart from these, I also like playing badminton. So, whenever I do get time, I usually read, write or play badminton.</p>
+</div>
+<i class="fas fa-volume-up" onclick="speak('div.que2')"></i>
+<div class="que2">
 <h3>Do you have a busy social life?</h3>
 <p>Yes, I do have quite a busy social life as I have a lot of friends with whom I often meet sometimes to celebrate someone's birthday or other important events. Even I love to intermingle with like-minded people in social gatherings.</p>
+</div>
+<i class="fas fa-volume-up" onclick="speak('div.que3')"></i>
+<div class="que3">
 <h3>Has your life changed much in the last year?</h3>
 <p>Yeah, in certain aspects. Last year I was out of the job due to covid, but this year I’m gainfully employed. I also own a business, and I live independent now, whereas last year, I was dependent on my sister.</p>
+</div>
+<i class="fas fa-volume-up" onclick="speak('div.que4')"></i>
+<div class="que4">
 <h3>What would you like to change about your lifestyle?</h3>
 <p>I want to cultivate a habit of early sleeping because it will not only help me to wake up early in the morning but will also help me to strike a balance between my professional and personal life.</p>
+</div>
+<i class="fas fa-volume-up" onclick="speak('div.que5')"></i>
+<div class="que5">
 <h3>Do you enjoy your current stage of life</h3>
 <p>Definitely! I’m so blessed to have parents who are supportive of me financially and emotionally. They support all my endeavors, especially my mom, she’s my greatest cheerleader and I can’t thank her enough. I don’t know what my life would be like without them.</p>
+</div>
 <button onclick="openTwo()" class="push-button" style="padding: 10px 30px; float: right; margin: 30px 0;">Next</button>
 </div>
 </div>
@@ -130,7 +145,12 @@
 <audio src="" id="preview" controls onended="hiddenIcon()"></audio>
 
 <script src="player.js"></script>
+<script src="jquery-3.1.0.slim.min.js"></script>
+<script src="articulate.js"></script>
 <script>
+  function speak(obj) {
+  $(obj).articulate('speak');
+};
     function openOne(){
     document.getElementById("page1").style.display="block"
     document.getElementById("page2").style.display="none"
