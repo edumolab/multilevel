@@ -13,26 +13,7 @@ self.addEventListener('install',  function (e) {
       console.log("CACHING /INDEX.HTML");
       return cache.addAll(
         [
-          'index.html', // == https://legends.io
-          'test1/index.html',
-          'test1/verify.html',
-          'test1/beep.mp3',
-          'test1/part1.html',
-          'test1/part2/part2.html',
-          'test1/part13/part3.html',
-          'result.html',
-          'test1/audio/1.mp3',
-          'test1/audio/2.mp3',
-          'test1/audio/3.mp3',
-          'test1/audio/4.mp3',
-          'test1/audio/5.mp3',
-          'test1/audio/6.mp3',
-          'test1/audio/two.mp3',
-          'test1/js/main.js',
-          'test1/js/quiz.js',
-          'test1/js/waveform.gif',
-          'test1/css/style.css',
-          'test1/css/boostrap.min.css',
+          '/index.html' // == https://legends.io
         ]
       );
     })
