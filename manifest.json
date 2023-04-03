@@ -1,0 +1,131 @@
+{
+  "background_color": "#ffffff",
+  "description": "Edumo Online Speaking Exam",
+  "dir": "ltr",
+  "display": "fullscreen",
+  "name": "Exam Online | Edumo",
+  "orientation": "portrait",
+  "scope": "/sw.js",
+  "short_name": "Multilevel SpeakApp",
+  "start_url": "index.html",
+  "theme_color": "#ffffff",
+  "categories": [],
+  "screenshots": [],
+  "icons": [
+    {
+      "src": "icons/windows11/SmallTile.scale-100.png",
+      "sizes": "71x71"
+    },
+    {
+      "src": "icons/windows11/SmallTile.scale-125.png",
+      "sizes": "89x89"
+    },
+    {
+      "src": "icons/windows11/SmallTile.scale-150.png",
+      "sizes": "107x107"
+    },
+    {
+      "src": "icons/windows11/SmallTile.scale-200.png",
+      "sizes": "142x142"
+    },
+    {
+      "src": "icons/windows11/SmallTile.scale-400.png",
+      "sizes": "284x284"
+    },
+    {
+      "src": "icons/windows11/Square150x150Logo.scale-100.png",
+      "sizes": "150x150"
+    },
+    {
+      "src": "icons/windows11/Square150x150Logo.scale-125.png",
+      "sizes": "188x188"
+    },
+    {
+      "src": "icons/windows11/Square150x150Logo.scale-150.png",
+      "sizes": "225x225"
+    },
+    {
+      "src": "icons/windows11/Square150x150Logo.scale-200.png",
+      "sizes": "300x300"
+    },
+    {
+      "src": "icons/windows11/Square150x150Logo.scale-400.png",
+      "sizes": "600x600"
+    },
+    {
+      "src": "icons/windows11/Wide310x150Logo.scale-100.png",
+      "sizes": "310x150"
+    },
+    {
+      "src": "icons/windows11/Wide310x150Logo.scale-125.png",
+      "sizes": "388x188"
+    },
+    {
+      "src": "icons/windows11/Wide310x150Logo.scale-150.png",
+      "sizes": "465x225"
+    },
+    {
+      "src": "icons/android/android-launchericon-512-512.png",
+      "sizes": "512x512"
+    },
+    {
+      "src": "icons/android/android-launchericon-192-192.png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "icons/android/android-launchericon-144-144.png",
+      "sizes": "144x144"
+    },
+    {
+      "src": "icons/android/android-launchericon-96-96.png",
+      "sizes": "96x96"
+    },
+    {
+      "src": "icons/android/android-launchericon-72-72.png",
+      "sizes": "72x72"
+    },
+    {
+      "src": "icons/android/android-launchericon-48-48.png",
+      "sizes": "48x48"
+    },
+    {
+      "src": "icons/ios/16.png",
+      "sizes": "16x16"
+    },
+    {
+      "src": "icons/ios/20.png",
+      "sizes": "20x20"
+    },
+    {
+      "src": "icons/ios/180.png",
+      "sizes": "180x180"
+    },
+    {
+      "src": "icons/ios/192.png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "icons/ios/256.png",
+      "sizes": "256x256"
+    },
+    {
+      "src": "icons/ios/512.png",
+      "sizes": "512x512"
+    },
+    {
+      "src": "icons/ios/1024.png",
+      "sizes": "1024x1024"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Exam Online | Edumo",
+      "url": "https://multilevel.vercel.app/",
+      "description": "Online Speaking App"
+    }
+  ],
+  "display_override": [
+    "fullscreen"
+  ],
+  "lang": "en"
+}
