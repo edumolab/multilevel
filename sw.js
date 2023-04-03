@@ -19,6 +19,7 @@ self.addEventListener('install',  function (e) {
           '/prep/index.html',
           '/prep/q1.html',
           '/prep/q2.html',
+          '/prep/q3.html',
           '/prep/player.js',
           '/prep/jquery-3.10.0.slim.min.js',
           '/prep/articulate.js',
