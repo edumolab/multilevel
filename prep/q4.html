@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Time Management & Friendship</title>
+</head>
+<body>
+
+<div id="page1">
+<div class="header">   
+     <a class="back" href="index.html"><i class="fa fa-arrow-left"></i></a>
+     <div class="left"></div>
+      <div class="center"><h3>Part 1</h3></div>
+      <div class="right"></div>
+</div>
+<div class="container">
+  <i class="fas fa-volume-up" onclick="speak('div.que1')"></i>
+  <div class="que1">
+<h3>How do you organize your time?</h3>
+<p>Hmm, well I'm not always the most organized person, but the good thing is that I'm not a procrastinator (someone who waits until the last minute). I always
+do what needs to be done first, such as my errands or work tasks. After I do what I need to do, I will then allow myself to relax.</p>
+</div>
+<i class="fas fa-volume-up" onclick="speak('div.que2')"></i>
+<div class="que2">
+<h3>Do you make plans every day?</h3>
+<p>No, I don't. I'm more of a spontaneous (unplanned) person. I don't like to plan every second of every day, as plans can quickly change. I only plan out what I need to do and how to get it done, but I let my social interactions come up (arise) unplanned.</p>
+</div>
+<i class="fas fa-volume-up" onclick="speak('div.que3')"></i>
+<div class="que3">
+<h3>Would you say you manage your time well?</h3>
+<p>More or less. I'm not the most organized nor disorganized person on the planet. However, I can say with certainty that I always complete what is asked of me. On the other hand, I sometimes can't do things like plan vacations very well.</p>
+</div>
+<i class="fas fa-volume-up" onclick="speak('div.que4')"></i>
+<div class="que4">
+<h3>Are you ever late for anything?</h3>
+<p>Once in a blue moon (very rarely)! I am a stickler (serious) about time, so I am almost never late. When I think about it, the only times I've been late for work were because of a traffic jam or an accident.</p>
+</div>
+<i class="fas fa-volume-up" onclick="speak('div.que5')"></i>
+<div class="que5">
+<h3>Do you think young people organize their time in the same way?</h3>
+<p>No, I don't. I think that's too general of a question. I believe everyone organizes their time in different ways. However, young people tend to have heavy work and study schedules, so they may not be able to manage their time and tasks as well as someone who doesn't. So, in this case, young people have to prioritize(decide what is most important) more.</p>
+</div>
+<i class="fas fa-volume-up" onclick="speak('div.que6')"></i>
+<div class="que6">
+<h3>I would have to say my social life. As I have a demanding work schedule, I tend to lose track of time and forget to add in time to spend with my friends and family. I am looking for a way to manage this better.</p>
+</div>
+<button onclick="openTwo()" class="push-button" style="padding: 10px 30px; float: right; margin: 30px 0;">Next</button>
+</div>
+</div>
+<!-----page two--->
+<div id="page2">
+<div class="header">   
+     <a class="back" onclick="openOne()"><i class="fa fa-arrow-left"></i></a>
+     <div class="left"></div>
+      <div class="center"><h3>Part 2</h3></div>
+      <div class="right"></div>
+</div>
+<div class="container">
+<i class="fas fa-volume-up" onclick="speak('div.part2')"></i>
+<div class="part2">   
+<h3>Describe a childhood friend you have lost touch with.</h3>
+  <p>You should say:
+    <ul>
+      <li>where you met</li>
+       <li>how you spent time together</li>
+       <li>what you liked about your friend</li>
+       <li>and say why you think you have lost touch with them.</li>
+    </ul>
+    </p>
+    <p>I’d like to tell you about Giorgio, my old schoolfriend. I met him in primary school –
+we were assigned to sit at the same desk and we hit it off in no time at all. He turned
+out to be quite keen on videogames, just as I was. This kind of brought us together.</p>
+
+<p>We would spend days either at my place or his talking about our hobbies, playing
+games or reading comic books. We would rarely go outside, which sometimes caused
+me falling out with my family. Other than that, my parents didn’t stand in the way of
+our friendship.</p>
+
+<p>What I really liked about Giorgio was his determination. I idolised his persistence in
+achieving whatever he would set out to do. I guess this quality has proved really
+helpful throughout his life. Small wonder he is so successful now!
+</p>
+
+<p>I guess the reason we grew apart was a natural one. At some point Giorgio became
+a family man, too busy to have time for many things. I mean we still have lots in
+common and would find something to talk about, but it just isn’t going to be the way
+it used to.</p>
+  </div>
+<button onclick="openThree()" class="push-button" style="padding: 10px 30px; float: right; margin: 30px 0;">Next</button>
+</div>
+</div>
+
+<!----Page3---->
+
+<div id="page3">
+<div class="header">   
+     <a class="back" onclick="openTwo()"><i class="fa fa-arrow-left"></i></a>
+     <div class="left"></div>
+      <div class="center"><h3>Part 3</h3></div>
+      <div class="right"></div>
+</div>
+<div class="container">
+<i class="fas fa-volume-up" onclick="speak('div.que8')"></i>
+<div class="que8">   
+<h3>What personal qualities make a good friend?</h3>
+  <p>I’d say that a good friend is a person with empathy. You should be able to relate to
+other people’s feelings – whether positive or negative ones. Another important trait
+of character is being considerate – paying attention to what other person says, thinks
+or needs. Finally, a great friend is a selfless one – in other words, they are ready to put other people’s interests before their own. Surely there are many other important
+personal qualities, but these three are the cornerstone ones.</p>
+ </div>
+  <i class="fas fa-volume-up" onclick="speak('div.que9')"></i>
+<div class="que9">     
+    <h3>Who do people have stronger connection with – their friends or their family?
+Why?</h3>
+    <p>This is a pretty tough question and it should be looked at a case-by-case basis. Some
+cultures have stronger family ties – whether it’s their immediate or extended family.
+They have family meetings and dinner regularly. They have more respect for the
+elder members of their community as well. Others bond stronger with their friends –
+either childhood ones or those from school, college or work. One thing is true – while
+we can’t choose our family, we can definitely pick friends – so it might be safe to say
+that the latter tends to be stronger as it is based on common interests or other things
+that draw people together.</p>
+  </div>
+   <i class="fas fa-volume-up" onclick="speak('div.que10')"></i>
+<div class="que10">  
+      <h3>Nowadays people tend to start families later in their lives. Why?</h3>
+      <p>I think there is a number of factors at play here. First of all, the economic reasons.
+Young people today have a harder time finding a promising career. A good job takes
+up the majority of their time which leaves little room for the personal side of life.
+Similarly, raising a child can be quite taxing on family budget so many choose to
+postpone having a family and children until they are financially comfortable. Another
+possible reason is an overall shift in social paradigm – some people no longer see
+starting a family as an integral part of life.</p>
+  </div>
+   <i class="fas fa-volume-up" onclick="speak('div.que11')"></i>
+<div class="que11">  
+        <h3>How has technology affected the way people communicate?</h3>
+<p>The ubiquity of the Internet and increasing popularity of mobile devices has had a
+dramatic effect on the way we keep in touch. In fact, the change was so vast that
+even phone conversations are becoming obsolete, rapidly being ousted by
+messengers. These enable people to send text or voice messages virtually free of
+charge. Consequently, people have moved from real-time conversations to sending
+and receiving messages that they can read or listen to at their convenience.</p>
+    </div>
+    <i class="fas fa-volume-up" onclick="speak('div.que12')"></i>
+<div class="que12">  
+        <h3>Has the way people meet their partners changed over the past twenty years?</h3>
+        <p>I would say yes, the dating scene is much more different from what it was for my
+parents. In those days people would find their other half at disco bars, parties at their friends’ or introduced to by mutual acquaintances. While some of these ways are still
+popular today, people have been increasingly preferring various online websites and
+apps for their dating needs. Some might say that the romance is now gone and the
+process of finding a partner has become devoid of thrill and excitement. All in all, the
+process has indeed changed.</p>
+    </div>    
+          <a href="https://multilevel.vercel.app/test1/part1.html" target="_blank"><button class="practise">Start Practising</button></a>
+        </div>
+</div>
+
+
+<!---Mic starts here---->
+<button class="mic"><i class="fa fa-microphone"></i></button>    
+<div id="bar">
+    <div class="status-bar">
+    <button id="record">Record answer</button>
+    </div>
+    <button id="stop">Stop record...</button>
+</div>
+<div id="player">
+    <div class="text-icon">
+    <a href="" download="" id="save"><i class="fa fa-save"></i></a>
+    <span>Save</span>
+    </div>
+    <div class="text-icon">
+    <i id="play" class="fa fa-play-circle"></i>
+    <span>Listen</span>
+</div>
+<div class="text-icon">
+    <i id="cancel" class="fa fa-times-circle"></i>
+    <span>Close</span>
+</div>
+</div>
+<audio src="" id="preview" controls onended="hiddenIcon()"></audio>
+
+<script src="player.js"></script>
+<script src="jquery-3.1.0.slim.min.js"></script>
+<script src="articulate.js"></script>
+<script>
+  function speak(obj) {
+  $(obj).articulate('speak');
+};
+    function openOne(){
+    document.getElementById("page1").style.display="block"
+    document.getElementById("page2").style.display="none"
+    document.getElementById("page3").style.display="none";
+}
+    function openTwo(){
+        document.getElementById("page2").style.display="block"
+    document.getElementById("page1").style.display="none";
+    document.getElementById("page3").style.display="none"
+    }
+
+    function openThree(){
+        document.getElementById("page2").style.display="none"
+    document.getElementById("page1").style.display="none";
+    document.getElementById("page3").style.display="block"
+    }
+    openOne()
+</script>
+</body>
+</html>

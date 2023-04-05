@@ -55,7 +55,7 @@ a{
 .footer-menu{
     width: 100%;
     display: flex;
-    justify-content:space-between;
+    justify-content:space-around;
     align-items: center;
     height: 60px;
     z-index: 999;
