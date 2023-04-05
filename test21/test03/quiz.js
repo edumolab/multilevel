@@ -621,7 +621,7 @@ function examEnd(){
 		  timer.innerHTML = `Please download your answer! We'll redirect home page in ${count} seconds`;
 		  if (count <= 0) {
 			clearInterval(interval);
-			window.location.href="../index.html"
+			window.location.href="https://multilevel.vercel.app/"
 		  }
 		}, 1000);
 }
