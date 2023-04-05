@@ -118,6 +118,13 @@
       "img":"https://storage.googleapis.com/smalltalk2/assets/Ticket-38.png",
       "status": "Free",
       "link": "test20/index.html"
+    },
+    {
+      "id": 18,
+      "title": "#Time Management, Friendship",
+      "img":"https://storage.googleapis.com/smalltalk2/assets/34-waiting_being_patient.png",
+      "status": "Free",
+      "link": "test21/index.html"
     }
   ]
 }
