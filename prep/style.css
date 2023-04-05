@@ -1,3 +1,7 @@
+*{ 
+    margin:0;
+    padding:0;
+}
 .container{
     width:80%;
     margin:20px 10% 40px 10%;
@@ -54,7 +58,7 @@ a{
     justify-content: center;
     align-items: center;
     height: 60px;
-    z-index: 3;
+    z-index: 999;
     position: fixed;
     top: 0;
     left: 10px;
