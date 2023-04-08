@@ -313,7 +313,6 @@ mark{
 
 
 
-
 	 var scores = [
         {
           band: 46,
@@ -354,9 +353,12 @@ mark{
 
       var score = document.getElementById("score");
       var commentary=document.getElementById("display")
-      score.innerHTML = "Your Score: " + randomBand+"/75"
-      commentary.innerHTML=randomScore.comment
+      score.innerHTML = `Your Score: ?/75`
+      commentary.innerHTML="We are temporarily unable to release your result as the program is under maintenance. Sorry for the inconvenience!"
+      //randomScore.comment
  };
+ 
+ 
 //hide function
 
 document.onkeydown = function(e) {
