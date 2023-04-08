@@ -292,9 +292,8 @@ mark{
 	<div id="score"></div>
 	<p id="display">
 	</p>
-	<!-------
   <p style="color:rgb(235, 22, 22); font-weight:bold;">Dear, user! The score you earned in the app may vary from your real score. The app may estimate your score wrongly. This app is created mainly for practising and tackling the stress in the real exam</p>
-	-------->
+
 	<a href="https://multilevel.vercel.app/"><button class="home-back">Home Page</button></a>
 </div>
 </div>
@@ -347,17 +346,17 @@ mark{
       ];
       
       function scoreAnalyzer(){
-      let min = 38;
-      let max = 68;
+      let min = 3;
+      let max = 58;
       let randomBand = Math.floor(Math.random() * (max - min + 1)) + min;
       var randomIndex = Math.floor(Math.random() * scores.length);
       var randomScore = scores[randomIndex];
 
       var score = document.getElementById("score");
       var commentary=document.getElementById("display")
-      score.innerHTML = `Your Score: ?/75`
-      commentary.innerHTML="We are temporarily unable to release your result as the program is under maintenance. Sorry for the inconvenience!"
-      //randomScore.comment
+      score.innerHTML = `Your Score: randomBand/75`
+      commentary.innerHTML=randomScore.comment
+     
  };
  
  
