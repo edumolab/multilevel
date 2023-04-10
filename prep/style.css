@@ -66,15 +66,19 @@ a{
     box-shadow:0 4px 5px rgba(223, 223, 223, 0.918)
 }
 
-
-
-.divider{
-    
-    border: 1px solid rgb(241, 241, 241);
-    background: rgb(219, 219, 219);
-    height: 80%;
+.menu{
+  display: flex;
+  flex-direction:column;
+  text-align: center;
+  color:rgb(206, 206, 206);
 }
 
+.menu-active{
+  display: flex;
+  flex-direction:column;
+  text-align: center;
+  color:rgb(30, 48, 80);
+}
 .note{
     position: relative;
     top: 0;
