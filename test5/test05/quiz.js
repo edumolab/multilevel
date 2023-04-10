@@ -28,6 +28,7 @@ const downloadAudio =document.getElementById("downloadButton");
 const preview =document.getElementById("audio-playback")
 let recorder, audio_stream;
 
+
 recicon.style.display="none"
 rectext.style.display="none"
 part1.style.display="none";
@@ -71,7 +72,7 @@ function stopRecording() {
   function downloadRecording(){
     var name = new Date();
     var res = name.toISOString().slice(0,10)
-    downloadAudio.download = res + '.wav';
+    downloadAudio.download = res + '.mp3';
 }
 
 //Scale UpandDown
@@ -105,7 +106,7 @@ var TextSize=document.getElementById("question-bar");
 function step0() {
 	welcome.style.display="none";
 	part1.style.display="block"
-	que.innerHTML="How do you organize your time?";
+	que.innerHTML="Do you like watching advertisements?";
 	que_id.innerHTML=1
 	audio1.play();
 	audio1.addEventListener("ended", startCountdown)
@@ -127,6 +128,7 @@ function startCountdown() {
 
 	// Define a function to start the 30-second countdown
 	function start30SecondCountdown() {
+		
 		recicon.style.display="block"
 		rectext.style.display="block"
 		let count = 30;
@@ -135,7 +137,8 @@ function startCountdown() {
 		  count--;
 		  timer.innerHTML = `${count} LEFT`;
 		  if (count <= 0) {
-		  	recicon.style.display="none"
+			
+		recicon.style.display="none"
 		rectext.style.display="none"
 			timer.innerHTML="";
 			clearInterval(interval);
@@ -148,9 +151,8 @@ function startCountdown() {
 }
 
 //Step1 fun
-
 function step1(){
-	que.innerHTML="Do you make plans every day?";
+	que.innerHTML="Have you ever bought something because of its advertisement?";
 	que_id.innerHTML=2
 	audio2.play();
 	audio2.addEventListener("ended", startCountdown);
@@ -171,16 +173,17 @@ function step1(){
 	
 		// Define a function to start the 30-second countdown
 		function start30SecondCountdown() {
-			recicon.style.display="block"
+		recicon.style.display="block"
 		rectext.style.display="block"
 			let count = 30;
 			timer.innerHTML = ` ${count} LEFT`;
 			const interval = setInterval(() => {
 			  count--;
+			 
 			  timer.innerHTML = `${count} LEFT`;
-			  if (count <= 0) {
-			  	recicon.style.display="none"
-		rectext.style.display="none"
+			  if (count <= 0) {	
+			recicon.style.display="none"
+			rectext.style.display="none"
 				timer.innerHTML="";
 				clearInterval(interval);
 				step2();
@@ -194,7 +197,7 @@ function step1(){
 //step2
 
 function step2(){
-	que.innerHTML="Would you say you manage your time well?";
+	que.innerHTML="Do you like funny or serious advertisements?";
 	que_id.innerHTML=3
 	audio3.play();
 	audio3.addEventListener("ended", startCountdown);
@@ -223,7 +226,7 @@ function step2(){
 			  count--;
 			  timer.innerHTML = `${count} LEFT`;
 			  if (count <= 0) {
-			  	recicon.style.display="none"
+				recicon.style.display="none"
 		rectext.style.display="none"
 				timer.innerHTML="";
 				clearInterval(interval);
@@ -237,7 +240,7 @@ function step2(){
 //step3
 
 function step3(){
-	que.innerHTML="Do you think young people organize their time in the same way?";
+	que.innerHTML="Are there many advertisements in your country?";
 	que_id.innerHTML=4
 	audio4.play();
 	audio4.addEventListener("ended", startCountdown);
@@ -266,7 +269,7 @@ function step3(){
 			  count--;
 			  timer.innerHTML = `${count} sec LEFT`;
 			  if (count <= 0) {
-			  	recicon.style.display="none"
+				recicon.style.display="none"
 		rectext.style.display="none"
 				timer.innerHTML="";
 				clearInterval(interval);
@@ -281,7 +284,7 @@ function step3(){
 //step4
 
 function step4(){
-	que.innerHTML="What's the biggest difficulty you have when managing time?";
+	que.innerHTML="Why do you think there are so many advertisements now?";
 	que_id.innerHTML=5
 	audio5.play();
 	audio5.addEventListener("ended", startCountdown);
@@ -310,7 +313,7 @@ function step4(){
 			  count--;
 			  timer.innerHTML = `${count} sec LEFT`;
 			  if (count <= 0) {
-			  	recicon.style.display="none"
+				recicon.style.display="none"
 		rectext.style.display="none"
 				timer.innerHTML="";
 				clearInterval(interval);
@@ -325,7 +328,7 @@ function step4(){
 //step5
 
 function step5(){
-	que.innerHTML="Do you think children should learn to manage time?";
+	que.innerHTML="How do you feel about advertisements?";
 	que_id.innerHTML=6
 	audio6.play();
 	audio6.addEventListener("ended", startCountdown);
@@ -354,7 +357,7 @@ function step5(){
 			  count--;
 			  timer.innerHTML = `${count} sec LEFT`;
 			  if (count <= 0) {
-			  	recicon.style.display="none"
+				recicon.style.display="none"
 		rectext.style.display="none"
 				timer.innerHTML="";
 				clearInterval(interval);
@@ -380,7 +383,7 @@ function part2(){
 //step6
 
 function step6(){
-	que.innerHTML=`<p><b>Describe a childhood friend you have lost touch with.</b></p><p>You should say:</p><ul><li>Where you met</li><li>how you spent time together</li><li>what you liked about your friend</li><li>and say why you think you have lost touch with them.</li></ul><br><textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Izoh yozish uchun"></textarea>`;
+	que.innerHTML=`<p><b>Describe a painting you would like to have in your home.</b></p><p>You should say:</p><ul><li>what painting or artwork it is</li><li>how you know about it</li><li>how much it would cost you</li></ul><br><textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Izoh yozish uchun"></textarea>`;
 	que_id.innerHTML=7
 	audio8.play();
 	audio8.addEventListener("ended", startCountdown);
@@ -409,7 +412,7 @@ function step6(){
 			  count--;
 			  timer.innerHTML = `${count} sec LEFT`;
 			  if (count <= 0) {
-			  	recicon.style.display="none"
+				recicon.style.display="none"
 		rectext.style.display="none"
 				timer.innerHTML="";
 				clearInterval(interval);
@@ -437,7 +440,7 @@ function part3(){
 
 
 function step7(){
-	que.innerHTML="What personal qualities make a good friend?";
+	que.innerHTML="How do people in your country feel about art?";
 	que_id.innerHTML=8
 	audio10.play();
 	audio10.addEventListener("ended", startCountdown);
@@ -466,7 +469,7 @@ function step7(){
 			  count--;
 			  timer.innerHTML = `${count} sec LEFT`;
 			  if (count <= 0) {
-			  	recicon.style.display="none"
+				recicon.style.display="none"
 		rectext.style.display="none"
 				timer.innerHTML="";
 				clearInterval(interval);
@@ -483,7 +486,7 @@ function step7(){
 //step8
 
 function step8(){
-	que.innerHTML="Who do people have stronger connection with – their friends or their family? Why?";
+	que.innerHTML="Do people in your country prefer music over art?";
 	que_id.innerHTML=9
 	audio11.play();
 	audio11.addEventListener("ended", startCountdown);
@@ -512,7 +515,7 @@ function step8(){
 			  count--;
 			  timer.innerHTML = `${count} sec LEFT`;
 			  if (count <= 0) {
-			  	recicon.style.display="none"
+				recicon.style.display="none"
 		rectext.style.display="none"
 				timer.innerHTML="";
 				clearInterval(interval);
@@ -527,7 +530,7 @@ function step8(){
 //step9
 
 function step9(){
-	que.innerHTML="Nowadays people tend to start families later in their lives. Why?";
+	que.innerHTML="Are older people more interested in art than younger people?";
 	que_id.innerHTML=10
 	audio12.play();
 	audio12.addEventListener("ended", startCountdown);
@@ -556,7 +559,7 @@ function step9(){
 			  count--;
 			  timer.innerHTML = `${count} sec LEFT`;
 			  if (count <= 0) {
-			  	recicon.style.display="none"
+				recicon.style.display="none"
 		rectext.style.display="none"
 				timer.innerHTML="";
 				clearInterval(interval);
@@ -571,7 +574,7 @@ function step9(){
 //step10
 
 function step10(){
-	que.innerHTML="How has technology affected the way people communicate?";
+	que.innerHTML="Should the government provide support for art and cultural activities?";
 	que_id.innerHTML=11
 	audio13.play();
 	audio13.addEventListener("ended", startCountdown);
@@ -600,7 +603,7 @@ function step10(){
 			  count--;
 			  timer.innerHTML = `${count} sec LEFT`;
 			  if (count <= 0) {
-			  	recicon.style.display="none"
+				recicon.style.display="none"
 		rectext.style.display="none"
 				timer.innerHTML="";
 				clearInterval(interval);
@@ -616,7 +619,7 @@ function step10(){
 
 
 function step11(){
-	que.innerHTML="Has the way people meet their partners changed over the past twenty years?";
+	que.innerHTML="Do you think that some people are naturally better artists than others?";
 	que_id.innerHTML=12
 	audio14.play();
 	audio14.addEventListener("ended", startCountdown);
@@ -645,7 +648,7 @@ function step11(){
 			  count--;
 			  timer.innerHTML = `${count} sec LEFT`;
 			  if (count <= 0) {
-			  	recicon.style.display="none"
+				recicon.style.display="none"
 		rectext.style.display="none"
 				timer.innerHTML="";
 				clearInterval(interval);
@@ -670,7 +673,7 @@ function examEnd(){
 		timer.innerHTML += `${count} seconds`;
 		const interval = setInterval(() => {
 		  count--;
-		  timer.innerHTML = `Please download your answer! We'll redirect result page in ${count} seconds`;
+		timer.innerHTML = `Please download your answer! We'll direct to result page in ${count} seconds`;
 		  if (count <= 0) {
 			clearInterval(interval);
 			window.location.href="https://multilevel.vercel.app/result.html"
