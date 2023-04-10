@@ -67,7 +67,7 @@ a{
   display: flex;
   flex-direction:column;
   text-align: center;
-  color:rgb(196, 194, 194);
+  color:rgb(179, 176, 176);
   text-decoration: none;
 }
 
@@ -79,7 +79,7 @@ a{
 }
 
 .icon-menu{
-  font-size:18px;
+  font-size:20px;
 }
 
 .note{
