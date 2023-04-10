@@ -67,14 +67,14 @@ a{
 }
 
 .menu{
-  display: flex;
+  display: block;
   flex-direction:column;
   text-align: center;
   color:rgb(206, 206, 206);
 }
 
 .menu-active{
-  display: flex;
+  display: block;
   flex-direction:column;
   text-align: center;
   color:rgb(30, 48, 80);
