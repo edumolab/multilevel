@@ -153,14 +153,18 @@
 	padding: 20px;
 }
 
+#res{
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+}
 #score{
 	color: white;
 	background: rgb(6, 163, 129);
 	border-radius: 10px;
 	border: 1px solid rgb(6, 163, 129);
-	padding: 5px;
+	padding: 8px;
 	font-size: 20px;
-	width: 150px;
 	text-align: center;	
 }
 
@@ -290,6 +294,7 @@ mark{
 
 <div id="result">
 	<div id="score"></div>
+  <button class="share-btn"><i class="fab fa-telegram"></i>&nbsp;&nbsp;Share Score</button>
 	<p id="display">
 	</p>
   <p style="color:rgb(235, 22, 22); font-weight:bold;">Dear, user! The score you earned in the app may vary from your real score. The app may estimate your score wrongly. This app is created mainly for practising and tackling the stress in the real exam</p>
@@ -356,7 +361,12 @@ mark{
       var commentary=document.getElementById("display")
       score.innerHTML = `Your Score: ${randomBand}/75`
       commentary.innerHTML=randomScore.comment
-     
+      document.querySelector(".share-btn").addEventListener("click", function(){
+        const text=`Hey👋, Let's try our app!  🤩 My result is ${randomBand}`
+        const url='https://multilevel.vercel.app/'
+        const share_link=`https://t.me/share/url?url=${url}&text=${text}`
+        window.open(share_link)
+      });
  };
  
  
