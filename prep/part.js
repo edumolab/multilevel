@@ -224,6 +224,7 @@ cue.forEach((item) => {
 
  liste.classList.add("card")
  liste.classList.add("py-3")
+ liste.classList.add("px-3")
 
  liste.appendChild(flex)
  list.appendChild(liste);
