@@ -210,7 +210,7 @@ const cue = [{
           
 ]
 
-var container=document.querySelector(".container")
+var container=document.getElementById("quiz-bar")
 cue.forEach((item) => {
  var list=document.createElement("ul");
  container.appendChild(list);
