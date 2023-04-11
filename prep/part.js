@@ -212,10 +212,10 @@ const cue = [{
 
 var container=document.getElementById("quiz-bar")
 cue.forEach((item) => {
- var list=document.createElement("ul");
+ var list=document.createElement("div");
  container.appendChild(list);
 
- var liste=document.createElement("li");
+ var liste=document.createElement("div");
 
  var flex=document.createElement("div")
  flex.classList.add("d-flex");
