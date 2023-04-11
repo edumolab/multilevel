@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/onsen-css-components.min.css">
+    <link rel="stylesheet" href="css/onsenui.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <title>Multi-Level Practice | Edumo</title>
+</head>
+<body>
+    <ons-page>
+        <ons-toolbar>
+          <div class="center">Topics</div>
+        </ons-toolbar>
+       <ons-list>
+                    <ons-list-item onclick="testOne()"><span class="badge">1</span>Life & Lifestyle<span class="note">Free</span></ons-list-item>
+                    <ons-list-item onclick="testTwo()"><span class="badge">2</span>TV & Adverts<span class="note">Free</span></ons-list-item>
+                    <ons-list-item onclick="testThree()"><span class="badge">3</span>Reading & Books <span class="note">Free</span></ons-list-item>
+                    <ons-list-item onclick="testFour()"><span class="badge">4</span>Time&Friendship<span class="note">Free</span></ons-list-item>
+                    <ons-list-item onclick="testFive()"><span class="badge">5</span>Cinema&Childhood <span class="note">Free</span></ons-list-item>
+                    <ons-list-item><span class="badge">6</span>Movies & Business<span class="note">Soon</span> </ons-list-item>
+                    </ons-list>
+            
+    </ons-page>
+  
+    <div class="footer-menu">
+            <div class=" menu"><a class="link" href="https://multilevel.vercel.app/"> <i class="fa fa-home icon-menu"></i><span>Home</span></a></div>
+            <div class=" menu "><a class="link" href="vocabulary.html"><i class="fa fa-language icon-menu"></i><span>Vocabulary</span></a></div>
+            <div class=" menu"><a class="link link-active" href="index.html"><i class="fas fa-book-open icon-menu"></i><span>Topics</span></a></div>
+     </div>
+
+    <script>
+        function testOne(){
+            window.location.href="q1.html"
+        }
+        function testTwo(){
+            window.location.href="q2.html"
+        }
+
+        function testThree(){
+            window.location.href="q3.html"
+        }
+
+        function testFour(){
+            window.location.href="q4.html"
+        }
+
+        function testFive(){
+            window.location.href="q5.html"
+        }
+    </script>
+    <script src="js/onsenui.min.js"></script>
+</body>
+</html>
