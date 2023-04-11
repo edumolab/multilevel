@@ -19,11 +19,50 @@ rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.2.0/mdb.min.css"
 rel="stylesheet"
 />
-<link rel="stylesheet" href="style.css">
+<style>
+    
+.footer-menu{
+    width: 100%;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    height: 60px;
+    z-index: 999;
+    position: fixed;
+    padding:0 5px;
+    bottom: 0;
+    left:0;
+    background-color: rgb(255, 255, 255);
+    box-shadow:0 -4px 5px rgba(177, 177, 177, 0.5);
+}
+
+.link{
+  display: flex;
+  flex-direction:column;
+  text-align: center;
+  color:rgb(160, 159, 159);
+  text-decoration: none;
+}
+
+.link>span{
+  font-size:12px;
+}
+
+.link-active{
+  display: flex;
+  flex-direction:column;
+  text-align: center;
+  color:rgb(30, 48, 80);
+}
+
+.icon-menu{
+  font-size:22px;
+}
+</style>
     <title>Part 2</title>
 </head>
 <body>
-<div class="container my-5 py-2">
+<div class="container-fluid my-5 py-2">
     <p class="text-center text-danger">&copy; Sarvarbek Ramazonov qo'llanmasi asosida tayyorlandi.</p>
     <ul id="list"></ul>
 </div>
