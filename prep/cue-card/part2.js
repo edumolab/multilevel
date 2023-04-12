@@ -143,8 +143,8 @@ document.getElementById("q1").addEventListener("click", function(){
 
 const shareData = {
 title: "Cue Card Questions",
-text: "Practice Speaking with Exam Online",
-url: `${item.que} ${item.ans}`,
+text: "${item.que} ${item.ans}",
+url: `https://multilevel.vercel.app/prep/part2.html`,
 };
 
 document.getElementById("shareBtn").addEventListener("click", function(){
