@@ -117,7 +117,7 @@ var answer=document.createElement("p");
 liste.appendChild(answer)
 answer.textContent=`${item.ans}`;
 answer.style.display="none";
-/*
+
 var sharebtn=document.createElement("i")
 sharebtn.classList.add("fa");
 sharebtn.classList.add("fa-share-square");
@@ -126,7 +126,7 @@ sharebtn.style.paddingTop="10px";
 sharebtn.setAttribute("id", "shareBtn");
 sharebtn.style.cursor="pointer"
 liste.appendChild(sharebtn);
-*/
+
 
 document.getElementById("q1").addEventListener("click", function(){
   if(answer.style.display=="none"){
