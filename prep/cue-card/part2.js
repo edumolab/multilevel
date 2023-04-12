@@ -123,7 +123,7 @@ sharebtn.classList.add("fa");
 sharebtn.classList.add("fa-share-square");
 sharebtn.style.color="blue";
 sharebtn.style.paddingTop="10px";
-sharebtn.setAttribute("id", "shareBtn");
+sharebtn.setAttribute("id", "share");
 sharebtn.style.cursor="pointer"
 liste.appendChild(sharebtn);
 
@@ -147,7 +147,7 @@ text: `${item.que} ${item.ans}`,
 url: `https://multilevel.vercel.app/prep/part2.html`,
 };
 
-document.getElementById("shareBtn").addEventListener("click", function(){
+document.getElementById("share").addEventListener("click", function(){
 navigator.share(shareData);
 console.log(shareData)
 });
