@@ -22,12 +22,22 @@
   rel="stylesheet"
 />
 <link rel="stylesheet" href="style.css">
+<style>
+    .darkmode-layer, .darkmode-toggle {
+  z-index: 999;
+}
+</style>
     <title>Reading Test</title>
 </head>
 <body>
     <div class="navbar">
  <div class="navbar-brand mx-3">Exam-Online</div>
- <i id="shareBtn" class="fa fa-share-alt mx-5 text-primary" style="cursor: pointer; font-size: 20px;"></i>
+ <div class="d-flex" style="margin-right: 40px;">
+ <i id="shareBtn" class="fa fa-share-alt mx-1 text-primary" style="cursor: pointer; font-size: 20px;"></i>
+ <div id="full-screen" class="mx-3" onclick="toggleFullScreen()">
+ <i class="fa fa-expand"></i>
+</div>
+</div>
     </div>
 
     <!-------Part1------>
@@ -81,7 +91,7 @@
 <p><b>The people all want to visit to an interesting city. Decide which city would be the
 most suitable for each person. Match <b>7-14 statements</b> to <b>A-J.</b></b></p>
 <span><b>7.</b></span>
-<select id="select7">
+<select id="select7" class="form-select" aria-label="Default select example">
     <option>Choose</option>
     <option>A</option>
     <option>B</option>
@@ -95,7 +105,7 @@ most suitable for each person. Match <b>7-14 statements</b> to <b>A-J.</b></b></
     <option>J</option>
 </select><br>
 <span><b>8.</b></span>
-<select id="select8">
+<select id="select8" class="form-select" aria-label="Default select example">
     <option>Choose</option>
     <option>A</option>
     <option>B</option>
@@ -109,7 +119,7 @@ most suitable for each person. Match <b>7-14 statements</b> to <b>A-J.</b></b></
     <option>J</option>
 </select><br>
 <span><b>9.</b></span>
-<select id="select9">
+<select id="select9" class="form-select" aria-label="Default select example">
     <option>Choose</option>
     <option>A</option>
     <option>B</option>
@@ -123,7 +133,7 @@ most suitable for each person. Match <b>7-14 statements</b> to <b>A-J.</b></b></
     <option>J</option>
 </select><br>
 <span><b>10.</b></span>
-<select id="select10">
+<select id="select10" class="form-select" aria-label="Default select example">
     <option>Choose</option>
     <option>A</option>
     <option>B</option>
@@ -137,7 +147,7 @@ most suitable for each person. Match <b>7-14 statements</b> to <b>A-J.</b></b></
     <option>J</option>
 </select><br>
 <span><b>11.</b></span>
-<select id="select11">
+<select id="select11" class="form-select" aria-label="Default select example">
     <option>Choose</option>
     <option>A</option>
     <option value="1">B</option>
@@ -151,7 +161,7 @@ most suitable for each person. Match <b>7-14 statements</b> to <b>A-J.</b></b></
     <option>J</option>
 </select><br>
 <span><b>12.</b></span>
-<select id="select12">
+<select id="select12" class="form-select" aria-label="Default select example">
     <option>Choose</option>
     <option>A</option>
     <option>B</option>
@@ -165,7 +175,7 @@ most suitable for each person. Match <b>7-14 statements</b> to <b>A-J.</b></b></
     <option>J</option>
 </select><br>
 <span><b>13.</b></span>
-<select id="select13">
+<select id="select13" class="form-select" aria-label="Default select example">
     <option>Choose</option>
     <option>A</option>
     <option>B</option>
@@ -179,7 +189,7 @@ most suitable for each person. Match <b>7-14 statements</b> to <b>A-J.</b></b></
     <option value="1">J</option>
 </select><br>
 <span><b>14.</b></span>
-<select id="select14">
+<select id="select14" class="form-select" aria-label="Default select example">
     <option>Choose</option>
     <option value="1">A</option>
     <option>B</option>
@@ -277,20 +287,20 @@ them. You cannot use any heading more than once.</p>
     <li> <input  class="form-check-input" type="radio" name="q21" value="" /> the income they generate from tourism.</li>
     <li> <input class="form-check-input" type="radio" name="q21" value=""> the area of land they occupy.</li>
     <li> <input class="form-check-input" type="radio" name="q21" value=""> their archaeological value.</li>
-    <li> <input class="form-check-input" type="radio" name="q21" id="b21" value=""> their romantic appeal.</li>
+    <li id="label21"> <input class="form-check-input" type="radio" name="q21" id="b21" value=""> their romantic appeal.</li>
 </ol>
 <BR>
 <ol type="A">
 <p><b>22.</b>Recent findings concerning vanished civilisations.</p>
-    <li><input class="form-check-input" type="radio" name="q22"> have overturned long-held beliefs.</li>
+    <li><input class="form-check-input" type="radio" name="q22">have overturned long-held beliefs.</li>
     <li><input class="form-check-input" type="radio" name="q22"> caused controversy amongst scientists.</li>
-    <li><input class="form-check-input" type="radio" name="q22" id="b22"> come from a variety of disciplines.</li>
+    <li id="label22"><input class="form-check-input" type="radio" name="q22" id="b22"> come from a variety of disciplines.</li>
     <li><input class="form-check-input" type="radio" name="q22"> identified one main cause of environmental damage.</li>
 </ol>
 <BR>
 <ol type="A">
 <p><b>23.</b>What does the writer say about ways in which former societies collapsed?</p>
-    <li><div class="form-check form-check-inline">
+    <li id="label23"><div class="form-check form-check-inline">
   <input class="form-check-input" type="radio" name="inlineRadioOptions" id="b23" value="option1" />
     <label class="form-check-label" for="b23"></label>
 </div>The pace of decline was usually similar.</li>
@@ -310,35 +320,35 @@ them. You cannot use any heading more than once.</p>
 <br>
 <h4>Questions 24-28</h4>
 <p><b>24.</b> It is widely believed that environmental problems represent the main danger faced by the modern world.</p>
-<select id="t24">
+<select id="t24" class="form-select" aria-label="Default select example">
     <option>Choose One</option>
     <option value="1">True</option>
     <option value="0">False</option>
     <option value="0">No Information</option>
 </select>
 <p><b>25.</b> The accumulation of poisonous substances is a relatively modern problem.</p>
-<select id="t25">
+<select id="t25" class="form-select" aria-label="Default select example">
     <option>Choose One</option>
     <option value="1">True</option>
     <option value="0">False</option>
     <option value="0">No Information</option>
 </select>
 <p><b>26.</b> There is general agreement that the threats posed by environmental problems are very serious.</p>
-<select id="t26">
+<select id="t26" class="form-select" aria-label="Default select example">
     <option>Choose One</option>
     <option value="0">True</option>
     <option  value="1">False</option>
     <option value="0">No Information</option>
 </select>
 <p><b>27.</b> Some past societies resembled present-day societies more closely than others.</p>
-<select id="t27">
+<select id="t27" class="form-select" aria-label="Default select example">
     <option>Choose One</option>
     <option value="0">True</option>
     <option value="0">False</option>
     <option value="1">No Information</option>
 </select>
 <p><b>28.</b> We should be careful when drawing comparisons between past and present.</p>
-<select  id="t28">
+<select  id="t28" class="form-select" aria-label="Default select example">
     <option>Choose One</option>
     <option value="1">True</option>
     <option value="0">False</option>
@@ -347,7 +357,7 @@ them. You cannot use any heading more than once.</p>
 <br><br>
 <ol type="A">
 <p><b>29.</b>What is the main argument of Reading Passage?</p>
-    <li><div class="form-check form-check-inline">
+    <li id="label29"><div class="form-check form-check-inline">
   <input class="form-check-input" type="radio" name="q29" id="last" value="option1" />
     <label class="form-check-label" for="inlineRadio1"></label>
 </div>There are differences as well as similarities between past and present societies.</li>
@@ -445,7 +455,7 @@ on to a winner.</p><br><br>
   <input class="form-check-input" type="radio" name="q30"  value="option1" />
     <label class="form-check-label" for="inlineRadio1"></label>
 </div>Create a convenient atmosphere of supermarket</li>
-    <li><div class="form-check form-check-inline">
+    <li id="label30"><div class="form-check form-check-inline">
   <input class="form-check-input" type="radio" name="q30" id="last2" value="option1" />
     <label class="form-check-label" for="inlineRadio1"></label>
 </div>Make customers spend more time on shopping</li>
@@ -527,11 +537,17 @@ received more emotional respect.</p>
 
 <div id="footBar" class="d-flex justify-content-around align-items-center shadow text-white fw-bold">
     <div><span id="timer" style="font-size:20px"></span></div>
-    <button clasS="btn btn-danger px-4" id="check-btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Check</button>
+    <button class=" btn btn-danger px-4 mx-3" id="restart-btn" onclick="reStart()">Restart</button>
     <div>
     <button class=" btn btn-primary px-4 mx-3" id="prev-btn" onclick="prevPage()">Prev</button>
-    <button class=" btn btn-danger px-4 mx-3" id="restart-btn" onclick="reStart()">Restart</button>
     <button class=" btn btn-primary px-4 mx-3" id="next-btn" onclick="nextPage()">Next</button>
+    <span id="index1""" class="text-white fw-bold mx-3" onclick="showOne()" style="font: 23px; cursor: pointer;">1</span>
+    <span id="index2""" class="text-white fw-bold mx-3" onclick="show2()"style="font: 23px; cursor: pointer;">2</span> 
+    <span id="index3""" class="text-white fw-bold mx-3" onclick="show3()"style="font: 23px; cursor: pointer;">3</span>
+    <span id="index4""" class="text-white fw-bold mx-3" onclick="show4()"style="font: 23px; cursor: pointer;">4</span>
+    <span id="index5""" class="text-white fw-bold mx-3" onclick="show5()"style="font: 23px; cursor: pointer;">5</span>
+    <button class=" btn btn-success px-4 mx-3" id="show-btn" onclick="showSol()"><i class="fa fa-eye"></i>&nbsp; Show</button>
+    <button clasS="btn btn-danger px-4" id="check-btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Check</button>
 </div>
 </div>
 
@@ -552,5 +568,27 @@ received more emotional respect.</p>
 
 <script src="quiz.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+<script>
+    
+const options = {
+  bottom: '75px', // default: '32px'
+  right: '32px', // default: '32px'
+  left: 'uset', // default: 'unset'
+  time: '0.5s', // default: '0.3s'
+  mixColor: '#fff', // default: '#fff'
+  backgroundColor: '#fff',  // default: '#fff'
+  buttonColorDark: '#100f2c',  // default: '#100f2c'
+  buttonColorLight: '#fff', // default: '#fff'
+  saveInCookies: true, // default: true,
+  label: '🌓', // default: ''
+  autoMatchOsTheme: true // default: true
+
+}
+
+const darkmode = new Darkmode(options);
+darkmode.showWidget();
+
+</script>
 </body>
 </html>
