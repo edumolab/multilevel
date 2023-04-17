@@ -25,3 +25,8 @@ input[type='range'] {
     background: #0795f3;
     box-shadow: -80px 0 0 80px #0d8add;
   }
+
+   .player{
+      font-size: 25px;
+      color:dodgerblue;
+    }

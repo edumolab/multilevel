@@ -25,12 +25,44 @@
 </ol>
 <ol>
 <h4>1. What can you tell me about the place you live in?</h4>
+<i class="fa fa-play-circle player" id="audio1"></i>
+<audio src="player/7.ogg" id="play1"></audio>
 <p>I live in one bedroom apartment on the 3rd floor of the apartment block in the central neighborhood in my hometown. The accommodation here is considered one of the best in the entire city, so I am lucky on this.</p>
 <h4>2. Is there anything you would like to change about the place you live in?</h4>
+<i class="fa fa-play-circle player" id="audio2"></i>
+<audio src="player/8.ogg" id="play2"></audio>
 <p>I'd really like to change the old windows to modern tinted ones and also replace the radiators, which are quite old. Also, I am considering a capital refurbishment in the apartment.</p>
 <h4>3. Do you plan to live there for a long time?</h4> 
+<i class="fa fa-play-circle player" id="audio3"></i>
+<audio src="player/9.ogg" id="play3"></audio>
 <p>It's hard to say anything about long-term, but I guess for the next 2-3 years, I am gonna stay here.</p>
 </div>
 	<a class="text-white text-decoration-none" href="weather.html"><button class="btn btn-primary btn-anime" style=" border-radius:30px; position: fixed;bottom:10px; width:50%; left:50%; transform: translate(-50%,-50%);">Weather<i class="fa fa-arrow-right px-3" style="position: fixed; bottom: 10px;"></i></button></a>
+
+
+	<script>
+		
+         document.getElementById("audio1").addEventListener("click", function(){
+         	document.getElementById("play1").play()
+         	document.getElementById("play3").pause()
+         	document.getElementById("play2").pause()
+         	
+         });
+
+         document.getElementById("audio2").addEventListener("click", function(){
+         	document.getElementById("play2").play();
+         	document.getElementById("play1").pause()
+         	document.getElementById("play3").pause()
+         	
+         });
+
+         document.getElementById("audio3").addEventListener("click", function(){
+         	document.getElementById("play3").play()
+         	document.getElementById("play1").pause()
+         	document.getElementById("play2").pause()
+         	
+         });
+		
+	</script>
 </body>
 </html>
