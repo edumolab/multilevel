@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+	<!-- Font Awesome -->
+<link
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+  rel="stylesheet"
+/>
+<!-- Google Fonts -->
+<link
+  href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+  rel="stylesheet"
+/>
+<!-- MDB -->
+<link
+  href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.2.0/mdb.min.css"
+  rel="stylesheet"
+/>
+	<title>Score Calculator</title>
+	<style>
+		input{
+			width: 400px;
+		}
+		.footer-menu{
+    width: 100%;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    height: 60px;
+    z-index: 999;
+    position: fixed;
+    padding:0 5px;
+    bottom: 0;
+    left:0;
+    background-color: rgb(255, 255, 255);
+    box-shadow:0 -4px 5px rgba(177, 177, 177, 0.5);
+}
+
+.link{
+  display: flex;
+  flex-direction:column;
+  text-align: center;
+  color:rgb(160, 159, 159);
+  text-decoration: none;
+}
+
+.link>span{
+  font-size:12px;
+}
+
+.link-active{
+  display: flex;
+  flex-direction:column;
+  text-align: center;
+  color:rgb(30, 48, 80);
+}
+
+.icon-menu{
+  font-size:22px;
+}
+	</style>
+</head>
+<body>
+
+<div class="container">	
+	<div class="mt-3 alert alert-danger d-flex align-items-center" role="alert">
+		<i class="fa fa-warning"></i> &nbsp; &nbsp;Foiz (%) belgisisiz yozing!
+	</div>
+	<h3>Task 1</h3>
+<input type="" class="form-control my-1" id="task" name="" placeholder="Task achievement 25%">
+<input type="" class="form-control my-3" id="gram" name="" placeholder="Grammar range 25%">
+<input type="" class="form-control my-3" id="lex" name="" placeholder="Lexical Resource 25%">
+<input type="" class="form-control my-3" id="coh" name="" placeholder="Coherence & Cohesion 25%"><br>
+	<h3>Task 2</h3>
+	<input type="" class="form-control my-3" id="task2" name="" placeholder="Task achievement 25%">
+	<input type="" class="form-control my-3" id="gram2" name="" placeholder="Grammar range 25%">
+	<input type="" class="form-control my-3" id="lex2" name="" placeholder="Lexical Resource 25%">
+	<input type="" class="form-control my-3" id="coh2" name="" placeholder="Coherence & Cohesion 25%"><br>
+	<button id="calc" class="btn btn-primary mb-4">Calculate</button>
+	<!----<input type="" id="speaking" name="">
+	<button id="speakcalc">Calculate</button>---->
+		<div class="row mt-4 mb-5">
+			<div class="fw-bold" id="result"></div>
+			<div class="fw-bold" id="taskans1"></div>
+			<div class="fw-bold" id="taskans2"></div>
+		</div>
+	  
+	   	<table class="table mb-5 pb-4" id="criteria">
+	   		<tr>
+	   			<th>Level</th>
+	   			<th>Overall Score</th>
+	   			<th>True Answers</th>
+	   		</tr>
+	   		<tr>
+	   			<td>C1</td>
+	   			<td>65-75</td>
+	   			<td>28-35</td>
+	   		</tr>
+	   		<tr>
+	   			<td>B2</td>
+	   			<td>51-64</td>
+	   			<td>18-27</td>
+	   		</tr>
+	   		<tr>
+	   			<td>B1</td>
+	   			<td>38-50</td>
+	   			<td>10-17</td>
+	   		</tr>
+	   		<tr>
+	   			<td>B1 dan quyi</td>
+	   			<td>0-37</td>
+	   			<td>0-9</td>
+	   		</tr>
+
+	   	</table>
+	
+</div>
+<div class="footer-menu">
+    <div class=" menu"><a class="link" href="https://multilevel.vercel.app/"> <i class="fa fa-home icon-menu"></i><span>Home</span></a></div>
+    <div class=" menu "><a class="link link-active" href="skills.html"><i class="fa fa-tasks icon-menu"></i><span>Skills</span></a></div>
+    <div class=" menu"><a class="link" href="index.html"><i class="fas fa-book-open icon-menu"></i><span>Topics</span></a></div>
+</div>	
+<script>
+	
+var InputValue;
+var criteria=document.getElementById("criteria")
+criteria.style.display="none"
+//Writing task 1
+    document.getElementById("calc").addEventListener("click", function(){
+    	criteria.style.display="block"
+    	var task=document.getElementById("task").value
+		var gram=document.getElementById("gram").value
+		var lex=document.getElementById("lex").value
+		var coh=document.getElementById("coh").value
+		var overall=Number(task)+Number(gram)+Number(lex)+Number(coh)
+		var yakuniy=(overall/100)*12
+		
+		//Task 2
+		var task2=document.getElementById("task2").value
+		var gram2=document.getElementById("gram2").value
+		var lex2=document.getElementById("lex2").value
+		var coh2=document.getElementById("coh2").value
+		var overall2=Number(task2)+Number(gram2)+Number(lex2)+Number(coh2)
+		var yakuniy2=(overall2/100)*24
+
+
+        //Overall
+    	InputValue=yakuniy+yakuniy2
+    	console.log(yakuniy, yakuniy2);
+    	document.getElementById("taskans1").innerHTML="Task 1: "+yakuniy+"/12"
+    	document.getElementById("taskans2").innerHTML="Task 2: "+yakuniy2+"/24"
+    	var natija=document.getElementById("result")
+    	if(InputValue==""){
+    		natija.innerHTML="Overall: Qiymat kiritilmadi"
+    	}
+    	else if(InputValue==parseFloat(0.1) || InputValue<parseFloat(0.6)){
+    		natija.innerHTML="Overall: 10"
+    	}
+    	else if(InputValue==parseFloat(0.6) || InputValue<1.1){
+    		natija.innerHTML="Overall:11"
+    	}
+    	else if(InputValue==parseFloat(1.1) || InputValue<1.6){
+    		natija.innerHTML="Overall:12"
+    	}
+    	else if(InputValue==parseFloat(1.6) || InputValue<2.1){
+    		natija.innerHTML="Overall:13"
+    	}
+    	else if(InputValue==parseFloat(2.1) || InputValue<2.6){
+    		natija.innerHTML="Overall:14"
+    	}
+    	else if(InputValue==parseFloat(2.6) || InputValue<3.1){
+    		natija.innerHTML="Overall:15"
+    	}
+    	else if(InputValue==parseFloat(3.1) || InputValue<3.6){
+    		natija.innerHTML="Overall:16"
+    	}
+    	else if(InputValue==parseFloat(3.6) || InputValue<4.1){
+    		natija.innerHTML="Overall:17"
+    	}
+    	else if(InputValue==parseFloat(4.1) || InputValue<4.6){
+    		natija.innerHTML="Overall:18"
+    	}
+    	else if(InputValue==parseFloat(4.6) || InputValue<5.1){
+    		natija.innerHTML="Overall:19"
+    	}
+    	else if(InputValue==parseFloat(5.1) || InputValue<5.6){
+    		natija.innerHTML="Overall:20"
+    	}
+    	else if(InputValue==parseFloat(5.6) || InputValue<6.1){
+    		natija.innerHTML="Overall: 21"
+    	}
+    	else if(InputValue==parseFloat(6.1) || InputValue<6.6){
+    		natija.innerHTML="Overall:22"
+    	}
+    	else if(InputValue==parseFloat(6.6) || InputValue<7.1){
+    		natija.innerHTML="Overall:23"
+    	}
+    	else if(InputValue==parseFloat(7.1) || InputValue<7.6){
+    		natija.innerHTML="Overall:24"
+    	}
+    	else if(InputValue==parseFloat(7.6) || InputValue<8.1){
+    		natija.innerHTML="Overall:25"
+    	}
+    	else if(InputValue==parseFloat(8.1) || InputValue<8.6){
+    		natija.innerHTML="Overall:26"
+    	}
+    	else if(InputValue==parseFloat(8.6) || InputValue<9.1){
+    		natija.innerHTML="Overall:27"
+    	}
+    	else if(InputValue==parseFloat(9.1) || InputValue<9.6){
+    		natija.innerHTML="Overall:28"
+    	}
+    	else if(InputValue==parseFloat(9.6) || InputValue<10.1){
+    		natija.innerHTML="Overall:29"
+    	}
+    	else if(InputValue==parseFloat(10.1) || InputValue<10.6){
+    		natija.innerHTML="Overall:30"
+    	}
+    	else if(InputValue==parseFloat(10.6) || InputValue<11.1){
+    		natija.innerHTML="Overall:31"
+    	}
+    	else if(InputValue==parseFloat(11.1) || InputValue<11.6){
+    		natija.innerHTML="Overall:32"
+    	}
+    	else if(InputValue==parseFloat(11.6) || InputValue<12.1){
+    		natija.innerHTML="Overall:33"
+    	}
+    	else if(InputValue==parseFloat(12.1) || InputValue<12.6){
+    		natija.innerHTML="Overall:34"
+    	}
+    	else if(InputValue==parseFloat(12.6) || InputValue<13.1){
+    		natija.innerHTML="Overall:35"
+    	}
+    	else if(InputValue==parseFloat(13.1) || InputValue<13.6){
+    		natija.innerHTML="Overall:36"
+    	}
+    	else if(InputValue==parseFloat(13.6) || InputValue<14.1){
+    		natija.innerHTML="Overall:37"
+    	}
+    	else if(InputValue==parseFloat(14.1) || InputValue<14.6){
+    		natija.innerHTML="Overall:38"
+    	}
+    	else if(InputValue==parseFloat(14.6) || InputValue<15.1){
+    		natija.innerHTML="Overall:39"
+    	}
+    	else if(InputValue==parseFloat(15.1) || InputValue<15.6){
+    		natija.innerHTML="Overall:40"
+    	}
+    	else if(InputValue==parseFloat(15.6) || InputValue<16.1){
+    		natija.innerHTML="Overall:41"
+    	}
+    	else if(InputValue==parseFloat(16.1) || InputValue<16.6){
+    		natija.innerHTML="Overall:42"
+    	}
+    	else if(InputValue==parseFloat(16.6) || InputValue<17.1){
+    		natija.innerHTML="Overall:43"
+    	}
+    	else if(InputValue==parseFloat(17.1) || InputValue<17.6){
+    		natija.innerHTML="Overall:44"
+    	}
+    	else if(InputValue==parseFloat(17.6) || InputValue<18.1){
+    		natija.innerHTML="Overall:45"
+    	}
+    	else if(InputValue==parseFloat(18.1) || InputValue<18.6){
+    		natija.innerHTML="Overall:46"
+    	}
+    	else if(InputValue==parseFloat(18.6) || InputValue<19.1){
+    		natija.innerHTML="Overall:47"
+    	}
+    	else if(InputValue==parseFloat(19.1) || InputValue<19.6){
+    		natija.innerHTML="Overall:48"
+    	}
+    	else if(InputValue==parseFloat(19.6) || InputValue<20.1){
+    		natija.innerHTML="Overall:49"
+    	}
+    	else if(InputValue==parseFloat(20.1) || InputValue<20.6){
+    		natija.innerHTML="Overall:50"
+    	}
+    	else if(InputValue==parseFloat(20.6) || InputValue<21.1){
+    		natija.innerHTML="Overall:51"
+    	}
+    	else if(InputValue==parseFloat(21.1) || InputValue<21.6){
+    		natija.innerHTML="Overall:52"
+    	}
+    	else if(InputValue==parseFloat(21.6) || InputValue<22.1){
+    		natija.innerHTML="Overall:53"
+    	}
+    	else if(InputValue==parseFloat(22.1) || InputValue<22.6){
+    		natija.innerHTML="Overall:54"
+    	}
+    	else if(InputValue==parseFloat(22.6) || InputValue<23.1){
+    		natija.innerHTML="Overall:55"
+    	}
+    	else if(InputValue==parseFloat(23.1) || InputValue<23.6){
+    		natija.innerHTML="Overall:56"
+    	}
+    	else if(InputValue==parseFloat(23.6) || InputValue<24.1){
+    		natija.innerHTML="Overall:57"
+    	}
+    	else if(InputValue==parseFloat(24.1) || InputValue<24.6){
+    		natija.innerHTML="Overall:58"
+    	}
+    	else if(InputValue==parseFloat(24.6) || InputValue<25.1){
+    		natija.innerHTML="Overall:59"
+    	}
+    	else if(InputValue==parseFloat(25.1) || InputValue<25.6){
+    		natija.innerHTML="Overall:60"
+    	}
+    	else if(InputValue==parseFloat(25.6) || InputValue<26.1){
+    		natija.innerHTML="Overall:61"
+    	}
+    	else if(InputValue==parseFloat(26.1) || InputValue<26.6){
+    		natija.innerHTML="Overall:62"
+    	}
+    	else if(InputValue==parseFloat(26.6) || InputValue<27.1){
+    		natija.innerHTML="Overall:63"
+    	}
+    	else if(InputValue==parseFloat(27.1) || InputValue<28.1){
+    		natija.innerHTML="Overall:64"
+    	}
+    	else if(InputValue==parseFloat(28.1) || InputValue<29.1){
+    		natija.innerHTML="Overall:65"
+    	}
+    	else if(InputValue==parseFloat(29.1) || InputValue<30.1){
+    		natija.innerHTML="Overall:66"
+    	}
+    	else if(InputValue==parseFloat(30.1) || InputValue<30.6){
+    		natija.innerHTML="Overall:67"
+    	}
+    	else if(InputValue==parseFloat(30.6) || InputValue<31.1){
+    		natija.innerHTML="Overall:68"
+    	}
+    	else if(InputValue==parseFloat(31.1) || InputValue<31.6){
+    		natija.innerHTML="Overall:69"
+    	}
+    	else if(InputValue==parseFloat(31.6) || InputValue<32.1){
+    		natija.innerHTML="Overall:70"
+    	}
+    	else if(InputValue==parseFloat(32.1) || InputValue<32.6){
+    		natija.innerHTML="Overall:71"
+    	}
+    	else if(InputValue==parseFloat(32.6) || InputValue<33.1){
+    		natija.innerHTML="Overall:72"
+    	}
+    	else if(InputValue==parseFloat(33.1) || InputValue<34.1){
+    		natija.innerHTML="Overall:73"
+    	}
+    	else if(InputValue==parseFloat(34.1) || InputValue<35.1){
+    		natija.innerHTML="Overall:74/75"
+    	}
+    	else if(InputValue==parseFloat(35.1) || InputValue<36.1){
+    		natija.innerHTML="Overall:75/75"
+    	}
+    	else if(InputValue<36.1){
+    		natija.innerHTML="Katta son kiritildi"
+    	}
+
+    	
+    })
+	
+</script>
+</body>
+</html>
