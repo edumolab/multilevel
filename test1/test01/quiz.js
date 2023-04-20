@@ -57,7 +57,7 @@ fetch(`${API_URL}?key=${API_KEY}&txt=${encodeURIComponent(transcript)}`)
     console.log(`The language of the transcript is ${language}`);
     if(language=="English"){
     console.log("52")
-	document.getElementById("lang").innerHTML=`Your speaking ${language}`
+	document.getElementById("lang").innerHTML=`You are speaking in ${language} language`
     document.getElementById("speech").innerHTML=transcript
 
   }
