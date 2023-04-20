@@ -35,6 +35,55 @@ part1.style.display="none";
 preview .style.display="none";
 downloadAudio .style.display="none";
 downloadAudio.addEventListener("click", downloadRecording);
+
+//Speech-to-text
+
+const recognition = new webkitSpeechRecognition();
+recognition.continuous = true;
+recognition.lang = 'en-US';
+
+recognition.onresult = function(event) {
+  const transcript = event.results[event.results.length - 1][0].transcript;
+  // Handle final transcript
+
+         // Get a transcript of what was said.
+const API_KEY = 'be4645fed8283011c6c71c74fcceecc3';
+const API_URL = 'https://api.meaningcloud.com/lang-4.0/identification';
+
+fetch(`${API_URL}?key=${API_KEY}&txt=${encodeURIComponent(transcript)}`)
+  .then(response => response.json())
+  .then(data => {
+    const language = data.language_list[0].name;
+    console.log(`The language of the transcript is ${language}`);
+    if(language=="English"){
+    console.log("52")
+	document.getElementById("lang").innerHTML=`Your speaking ${language}`
+    document.getElementById("speech").innerHTML=transcript
+
+  }
+  else{
+    console.log("0")
+  }
+  })
+  .catch(error => console.error(error));
+};
+
+recognition.oninterimresult = function(event) {
+  const interimTranscript = event.results[event.results.length - 1][0].transcript;
+  document.getElementById('speech').textContent = interimTranscript;
+};
+
+recognition.onerror = function(event) {
+  console.error(event.error);
+  // Handle error
+};
+
+
+
+
+
+
+
 //Recorder
 startRecording();
 function startRecording() {
@@ -131,6 +180,7 @@ function startCountdown() {
 		
 		recicon.style.display="block"
 		rectext.style.display="block"
+		recognition.start();
 		let count = 30;
 		timer.innerHTML = ` ${count}  LEFT`;
 		const interval = setInterval(() => {
@@ -140,6 +190,7 @@ function startCountdown() {
 			
 		recicon.style.display="none"
 		rectext.style.display="none"
+		recognition.stop()
 			timer.innerHTML="";
 			clearInterval(interval);
 			step1();
