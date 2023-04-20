@@ -190,10 +190,10 @@ function startCountdown() {
 			
 		recicon.style.display="none"
 		rectext.style.display="none"
-		recognition.stop()
 			timer.innerHTML="";
 			clearInterval(interval);
 			step1();
+			recognition.stop()
 	
 		  }
 		}, 1000);
@@ -226,6 +226,7 @@ function step1(){
 		function start30SecondCountdown() {
 		recicon.style.display="block"
 		rectext.style.display="block"
+		recognition.start()
 			let count = 30;
 			timer.innerHTML = ` ${count} LEFT`;
 			const interval = setInterval(() => {
@@ -238,6 +239,7 @@ function step1(){
 				timer.innerHTML="";
 				clearInterval(interval);
 				step2();
+				recognition.stop()
 		
 			  }
 			}, 1000);
@@ -271,6 +273,7 @@ function step2(){
 		function start30SecondCountdown() {
 			recicon.style.display="block"
 		rectext.style.display="block"
+		recognition.start()
 			let count = 30;
 			timer.innerHTML = ` ${count} LEFT`;
 			const interval = setInterval(() => {
@@ -282,6 +285,7 @@ function step2(){
 				timer.innerHTML="";
 				clearInterval(interval);
 				step3();
+				recognition.stop()
 		
 			  }
 			}, 1000);
@@ -314,6 +318,7 @@ function step3(){
 		function start30SecondCountdown() {
 			recicon.style.display="block"
 		rectext.style.display="block"
+		recognition.start()
 			let count = 30;
 			timer.innerHTML = ` ${count} sec LEFT`;
 			const interval = setInterval(() => {
@@ -322,9 +327,11 @@ function step3(){
 			  if (count <= 0) {
 				recicon.style.display="none"
 		rectext.style.display="none"
+
 				timer.innerHTML="";
 				clearInterval(interval);
 				step4();
+				recognition.stop()
 		
 			  }
 			}, 1000);
@@ -358,6 +365,7 @@ function step4(){
 		function start30SecondCountdown() {
 			recicon.style.display="block"
 		rectext.style.display="block"
+		recognition.start()
 			let count = 30;
 			timer.innerHTML = ` ${count} sec LEFT`;
 			const interval = setInterval(() => {
@@ -369,6 +377,7 @@ function step4(){
 				timer.innerHTML="";
 				clearInterval(interval);
 				step5();
+				recognition.stop()
 		
 			  }
 			}, 1000);
@@ -402,6 +411,7 @@ function step5(){
 		function start30SecondCountdown() {
 			recicon.style.display="block"
 		rectext.style.display="block"
+		recognition.start()
 			let count = 30;
 			timer.innerHTML = ` ${count} sec LEFT`;
 			const interval = setInterval(() => {
@@ -413,6 +423,7 @@ function step5(){
 				timer.innerHTML="";
 				clearInterval(interval);
 				part2();
+				recognition.stop()
 		
 			  }
 			}, 1000);
