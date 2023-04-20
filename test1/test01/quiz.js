@@ -424,6 +424,7 @@ function step5(){
 				clearInterval(interval);
 				part2();
 				recognition.stop()
+				document.getElementById("result").style.display="none"
 		
 			  }
 			}, 1000);
@@ -468,6 +469,8 @@ function step6(){
 		function start30SecondCountdown() {
 			recicon.style.display="block"
 		rectext.style.display="block"
+		recognition.start()
+		document.getElementById("result").style.display="block"
 			let count = 120;
 			timer.innerHTML = ` ${count} sec LEFT`;
 			const interval = setInterval(() => {
@@ -479,6 +482,8 @@ function step6(){
 				timer.innerHTML="";
 				clearInterval(interval);
 				part3();
+				recognition.stop()
+				document.getElementById("result").style.display="none"
 			  }
 			}, 1000);
 		  }
