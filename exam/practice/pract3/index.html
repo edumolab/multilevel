@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Practice 2</title>
+    <meta name="description" content="Exam Online | Edumo Speaking Practice">
+    <meta name="keywords" content="Multi Level Speaking, Multilevel, Multilevel testlari">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="ico/favicon.ico">
+    <!-- Custom Style Sheet -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Font Awesome -->
+<link
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+rel="stylesheet"
+/>
+<!-- Google Fonts -->
+<link
+href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+rel="stylesheet"
+/>
+<!-- MDB -->
+<link
+href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.2.0/mdb.min.css"
+rel="stylesheet"
+/>
+
+<style>
+
+.quiz-text{
+            font-size: 22px;
+            white-space: normal;
+            width:100%;
+        }
+    @media screen and (max-width:450px) {
+        .quiz-text{
+            font-size: 17px;
+            width:100%;
+        }
+    }
+
+    @media screen and (max-width:350px) {
+        .quiz-text{
+            font-size: 13px;
+            width:100%;
+        }
+    }
+    
+</style>
+
+</head>
+
+<body>
+    <div class="container-fluid">
+       
+<div class="container-fluid alert alert-info mt-3">
+<div class="row justify-content-center align-items-center">
+    <div class="col-md-6">
+            <span class="badge rounded-pill text-light bg-primary border-0 px-5 py-2">Question# <span id="que-id"></span></span>
+                <p  class="quiz-text d-block py-2 border-1 badge text-dark" id="question-bar"></p>
+    </div>
+
+
+    <div class="col-md-6 text-center">
+        <p class="text-light fw-bold text-center bg-info rounded-pill" id="timer"></p>
+    </div>
+
+</div>
+
+</div>
+<details>
+    <summary>Sample Answer</summary>
+    <p style="height: 300px; overflow-y:scroll">
+        <b>Is your hometown famous for anything?</b><br>
+        Yes, my hometown is famous for the local food, palov. Everyone who comes to my hometown would try this food. Also, there're some famous tourist attractions and the most famous place is Kasem Sheik mosque and collection, which would attract people from all over the country.<br>
+        <b>What do you like most about living in your hometown?</b><br>
+        I love the local food. I have to admit every region has their famous food and it's hard to find authentic food of my hometown in other cities, so I would always miss the delicious local food when I' m away.<br>
+
+        <b>Do you like your hometown?</b><br>
+        Of course! Who doesn't like his hometown? And from among all the aspects, I love the local food most. It's hard to find authentic food of my hometown in other cities, so I would always miss the delicious local food when I'm away.<br>
+
+        <b>Would you say it's an interesting place?</b><br>
+        Yes. Though it's a small place, there are some scenic spots. Modern facilities for entertainments are also built up in downtown areas. So we can always find something interesting to do when getting together with friends. And if you have time, I may be your guide to have a tour around there.<br>
+
+        <b>What would you say are the good points and the bad points of your hometown?</b><br>
+        Well, the local food is definitely a good point, and the native people are hospitable. In the past, the environment was among the best in the neighboring areas. But the protection has not been attached importance to. So now pollution has become one of the most serious problems in my hometown.<br>
+
+        <b>Did your friends also grow up in the same place as you?</b><br>
+        My old friends are mostly former classmates and neighbors in my hometown. Since I attended the university, I have been making new friends coming from different areas.
+        
+        </p>
+</details>
+        <!------Audioplayer---->
+ <main class="container  d-flex flex-column">
+    <div id="downloadContainer">
+        <audio src=""  id="audio-playback" type="audio/mpeg"></audio>
+     </div>
+     <a style="width: 200px;" class="btn btn-primary text-white " href="" download="" id="downloadButton">Download Audio</a>
+</main>
+        <h3 class="no-browser-support">Sorry, Your Browser Doesn't Support the Web Speech API. Try Opening This Demo In Google Chrome.</h3>
+        <div class="app">
+            <div class="row">
+                <div class="col-md-6 align-center">
+                    <div class="input-single">
+                        <div class="bg-light text-dark text-left px-2 py-2 border-1 shadow-sm" style="width:100%; height:auto;max-height: 250px; overflow-y: scroll;" id="note-textarea">
+                        Your speech will be shown here...
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-center">
+                    <button id="start-record-btn" class=" btn btn-success px-5" title="Start Recording">Start</button>
+                    <button id="refresh_btn" class="btn btn-danger mx-5" title=""><i class="fa fa-refresh"></i>&nbsp;Restart</button>
+                    <button id="next-btn" class="btn btn-primary mx-5" title="">Practice 4 &nbsp; <i class="fa fa-arrow-right"></i> </button>
+                    <button id="save-note-btn" class="btn btn-info mx-5" title="Save Note">Save</button>
+                    </div>
+                    <p id="recording-instructions">
+                        <strong>"Start"</strong> tugmasini bosing va mikrofonga ruxsat bering.</p>
+                </div>
+                <div class="col-md-6 align-center">
+                    <h3>My Results</h3>
+                    <ul id="notes">
+                        <li>
+                            <p class="no-notes">You don't have any notes.</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- /row -->
+        </div>
+        <!-- /app -->
+    </div>
+
+                        <audio src="beep.mp3" id="beep"></audio>
+                        <audio src="1.mp3" id="audio_1"></audio>
+                        <audio src="2.mp3" id="audio_2"></audio>
+                        <audio src="3.mp3" id="audio_3"></audio>
+                        <audio src="4.mp3" id="audio_4"></audio>
+                        <audio src="5.mp3" id="audio_5"></audio>
+                        <audio src="6.mp3" id="audio_6"></audio>
+                        <audio src="7.mp3" id="audio_7"></audio>
+                        
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/quiz.js"></script>
+
+   
+</body>
+
+</html>
