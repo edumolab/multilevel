@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Practice 7</title>
+    <meta name="description" content="TV and Books Part 1 Speaking | Practice 7">
+    <meta name="keywords" content="Exam Online, Multi Level Speaking, Multilevel, Multilevel testlari">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <!-- Font Awesome -->
+<link
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+rel="stylesheet"
+/>
+<!-- Google Fonts -->
+<link
+href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+rel="stylesheet"
+/>
+<!-- MDB -->
+<link
+href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.2.0/mdb.min.css"
+rel="stylesheet"
+/>
+
+<style>
+
+     #refresh-btn{
+        display: none;
+    }
+
+    #next-btn{
+        display: none;
+    }
+    #downloadContainer{
+        display: none;
+    }
+
+    #downloadButton{
+        display: none;
+    }
+
+    #audio-playback{
+        display: none;
+    }
+
+
+
+    #timer{
+            font-size: 16px;
+        }
+
+    @media screen and (max-width:450px) {
+         #watch{
+            display: none;
+        }
+
+        #timer{
+            font-size: 13px;
+        }
+    }
+
+    @media screen and (max-width:350px) {
+        #watch{
+            display: none;
+        }
+        #timer{
+            font-size: 12px;
+        }
+    }
+
+  
+</style>
+
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5842574556684675"
+     crossorigin="anonymous"></script>
+    <title>Ads</title>
+    <script src="https://www.googleoptimize.com/optimize.js?id=OPT-5LZ3TW5"></script>
+
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5842574556684675"
+    crossorigin="anonymous"></script>
+  
+    <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-WCQ7F7Q');</script>
+    <!-- End Google Tag Manager -->
+  
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-VR4GHXNBN4"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+  
+    gtag('config', 'G-VR4GHXNBN4');
+  </script>
+
+</head>
+
+<body>
+    <div class="container">
+ 
+<section class="container my-3 pt-2 shadow-sm border-1" style="border: 1px solid lightgrey; border-radius: 5px;">
+ <div class="row">
+   <div class="col-md-5 py-3">
+     <div class="card">
+       <div class="card-body">
+         <div class="header-question d-flex justify-content-between align-items-center">
+           <span class="badge rounded-pill text-light bg-primary border-0 px-5 py-2">Question# <span id="que-id"></span></span>
+           <div>
+           <i class="fa fa-microphone text-primary mx-1" id="watch"></i></div>
+         </div>
+        
+         <div id="question-bar">
+         </div>
+       </div>
+     </div>
+   </div>
+   <!----Right side--->
+   <div class="col-md-7 py-3">
+     <div class="card" id="card">
+       <div class="card-body">
+         <div class="header-question d-flex justify-content-around align-items-center">
+           <button class="btn btn-primary w-100 fw-bold py-1">
+            <i class="fa fa-stopwatch text-light" style="font-size:16px"></i><span class=" px-2" id="timer"></span>
+           </button>
+         </div>
+       </div>
+     </div>
+   </div>
+ </div>
+ </section>
+
+<details>
+    <summary>Sample Answer</summary>
+    <p style="height: 400px; overflow-y:scroll">
+        <b>Do you like watching TV?</b><br>
+        I hate TV, and think that one of the worst ways to degrade is watching TV. even if I have a TV at home, I don't watch it at all.<br>
+        
+        <b>How often do you watch TV?</b><br>
+        Again, I'm the least TV person one can imagine. It;'s just a complete waste of time.<br>
+
+        <b>What kind of TV programs do you like to watch?</b><br>
+        I used to watch documentaries on NatGeo about different animals, but now I watch them on the Internet, thanks to streaming apps.<br>
+
+        <b>Do you like reading books?</b><br>
+        I am not much of a reader, but I like to read from time to time. Usually it's non-fiction and I am super picky about what I want to read.<br>
+
+        <b>How often do you read?</b><br>
+        Every once in a while, when I feel like to. Usually I do something else instead of reading.<br>
+
+        <b>Do you have many books at home?</b><br>
+        Oh yes, I have a huge collection of Russian and world literature. I haven't read all of them, but I know the main plot of each and every book.
+        </p>
+</details>
+        
+ <!------Audioplayer---->
+ <main class=" container py-1 d-flex flex-column">
+     <a style="width: 200px;" class="btn btn-primary text-white my-3" href="" download="" id="downloadButton">Download Answer</a>
+</main>
+
+
+                <div class="container d-flex align-items-center justify-content-center">
+                    <button id="start-btn" class=" btn btn-success mx-2" title="Start Recording">Start</button>
+                    <button onclick="window.location.reload()" id="refresh-btn" class="btn btn-danger mx-2" title=""><i class="fa fa-refresh"></i>&nbsp;Restart</button>
+                    <button onclick="javascript:void()" id="next-btn" class="btn btn-primary mx-2" title="">Practice 8 &nbsp; <i class="fa fa-arrow-right"></i> </button>
+                </div>
+
+                <div class="container mt-5 py-3">
+                        <div id="audio-list"></div>
+                    
+                </div>
+    
+</div><!---Fluid-container--->
+
+                        <audio src="beep.mp3" id="beep"></audio>
+                        <audio src="1.mp3" id="audio_1"></audio>
+                        <audio src="2.mp3" id="audio_2"></audio>
+                        <audio src="3.mp3" id="audio_3"></audio>
+                        <audio src="4.mp3" id="audio_4"></audio>
+                        <audio src="5.mp3" id="audio_5"></audio>
+                        <audio src="6.mp3" id="audio_6"></audio>
+                        <audio src="7.mp3" id="audio_7"></audio>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="assets/js/quiz.js"></script>
+
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5842574556684675"
+    crossorigin="anonymous"></script>
+<!-- Ad1 -->
+<ins class="adsbygoogle"
+    style="display:block"
+    data-ad-client="ca-pub-5842574556684675"
+    data-ad-slot="4049078492"
+    data-ad-format="auto"
+    data-full-width-responsive="true"></ins>
+<script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+    <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WCQ7F7Q"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+</body>
+</html>
