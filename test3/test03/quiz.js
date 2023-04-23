@@ -26,17 +26,68 @@ const timer=document.getElementById("timer");
 const que_id=document.getElementById("que-id");
 const downloadAudio =document.getElementById("downloadButton");
 const preview =document.getElementById("audio-playback")
+const loader =document.getElementById("loader")
 let recorder, audio_stream;
 
 
+document.getElementById("alert").style.display="none"
 recicon.style.display="none"
 rectext.style.display="none"
-part1.style.display="none";
 preview .style.display="none";
 downloadAudio .style.display="none";
 downloadAudio.addEventListener("click", downloadRecording);
+
+//Speech-to-text
+/*
+const recognition = new webkitSpeechRecognition();
+recognition.continuous = true;
+recognition.lang = "en-US";
+recognition.onresult = function(event) {
+  const transcript = event.results[event.results.length - 1][0].transcript;
+  // Handle final transcript
+
+         // Get a transcript of what was said.
+const API_KEY = 'be4645fed8283011c6c71c74fcceecc3';
+const API_URL = 'https://api.meaningcloud.com/lang-4.0/identification';
+
+fetch(`${API_URL}?key=${API_KEY}&txt=${encodeURIComponent(transcript)}`)
+  .then(response => response.json())
+  .then(data => {
+    const language = data.language_list[0].name;
+    console.log(`The language of the transcript is ${language}`);
+    if(language=="English"){
+    console.log("52")
+	document.getElementById("lang").innerHTML=`You are speaking in ${language} language`
+    document.getElementById("speech").innerHTML=transcript
+
+  }
+  else{
+    console.log("0")
+    document.getElementById("lang").innerHTML=`I do not understand you`;
+    document.getElementById("speech").innerHTML=""
+  }
+  })
+  .catch(error => console.error(error));
+};
+
+recognition.oninterimresult = function(event) {
+  const interimTranscript = event.results[event.results.length - 1][0].transcript;
+  document.getElementById('speech').textContent = interimTranscript;
+};
+
+recognition.onerror = function(event) {
+  console.error(event.error);
+  // Handle error
+};
+
+
+*/
+
+
+
 //Recorder
 startRecording();
+//recognition.start()
 function startRecording() {
   navigator.mediaDevices.getUserMedia({ audio: true })
     .then(function (stream) {
@@ -108,6 +159,7 @@ function step0() {
 	part1.style.display="block"
 	que.innerHTML="Do you like reading books?";
 	que_id.innerHTML=1
+	document.getElementById("result").style.display="none"
 	audio1.play();
 	audio1.addEventListener("ended", startCountdown)
 
@@ -131,6 +183,7 @@ function startCountdown() {
 		
 		recicon.style.display="block"
 		rectext.style.display="block"
+		document.getElementById("result").style.display="block"
 		let count = 30;
 		timer.innerHTML = ` ${count}  LEFT`;
 		const interval = setInterval(() => {
@@ -142,8 +195,8 @@ function startCountdown() {
 		rectext.style.display="none"
 			timer.innerHTML="";
 			clearInterval(interval);
-			step1();
-	
+			step1();	
+			
 		  }
 		}, 1000);
 	  }
@@ -154,6 +207,7 @@ function startCountdown() {
 function step1(){
 	que.innerHTML="How often do you read?";
 	que_id.innerHTML=2
+	document.getElementById("result").style.display="none"
 	audio2.play();
 	audio2.addEventListener("ended", startCountdown);
 	//countdown 5 sec
@@ -175,6 +229,7 @@ function step1(){
 		function start30SecondCountdown() {
 		recicon.style.display="block"
 		rectext.style.display="block"
+		document.getElementById("result").style.display="block"
 			let count = 30;
 			timer.innerHTML = ` ${count} LEFT`;
 			const interval = setInterval(() => {
@@ -187,6 +242,7 @@ function step1(){
 				timer.innerHTML="";
 				clearInterval(interval);
 				step2();
+				
 		
 			  }
 			}, 1000);
@@ -199,6 +255,7 @@ function step1(){
 function step2(){
 	que.innerHTML="Do you have many books at home?";
 	que_id.innerHTML=3
+	document.getElementById("result").style.display="none"
 	audio3.play();
 	audio3.addEventListener("ended", startCountdown);
 	//countdown 5 sec
@@ -220,6 +277,7 @@ function step2(){
 		function start30SecondCountdown() {
 			recicon.style.display="block"
 		rectext.style.display="block"
+		document.getElementById("result").style.display="block"
 			let count = 30;
 			timer.innerHTML = ` ${count} LEFT`;
 			const interval = setInterval(() => {
@@ -230,8 +288,7 @@ function step2(){
 		rectext.style.display="none"
 				timer.innerHTML="";
 				clearInterval(interval);
-				step3();
-		
+				step3();		
 			  }
 			}, 1000);
 		  }
@@ -242,6 +299,7 @@ function step2(){
 function step3(){
 	que.innerHTML="Do others in your family read books too?";
 	que_id.innerHTML=4
+	document.getElementById("result").style.display="none"
 	audio4.play();
 	audio4.addEventListener("ended", startCountdown);
 	//countdown 5 sec
@@ -263,6 +321,7 @@ function step3(){
 		function start30SecondCountdown() {
 			recicon.style.display="block"
 		rectext.style.display="block"
+		document.getElementById("result").style.display="block"
 			let count = 30;
 			timer.innerHTML = ` ${count} sec LEFT`;
 			const interval = setInterval(() => {
@@ -271,6 +330,7 @@ function step3(){
 			  if (count <= 0) {
 				recicon.style.display="none"
 		rectext.style.display="none"
+
 				timer.innerHTML="";
 				clearInterval(interval);
 				step4();
@@ -286,6 +346,7 @@ function step3(){
 function step4(){
 	que.innerHTML="How does book help us?";
 	que_id.innerHTML=5
+	document.getElementById("result").style.display="none"
 	audio5.play();
 	audio5.addEventListener("ended", startCountdown);
 	//countdown 5 sec
@@ -307,6 +368,7 @@ function step4(){
 		function start30SecondCountdown() {
 			recicon.style.display="block"
 		rectext.style.display="block"
+		document.getElementById("result").style.display="block"
 			let count = 30;
 			timer.innerHTML = ` ${count} sec LEFT`;
 			const interval = setInterval(() => {
@@ -330,6 +392,7 @@ function step4(){
 function step5(){
 	que.innerHTML="What's your favorite kind of book?";
 	que_id.innerHTML=6
+	document.getElementById("result").style.display="none"
 	audio6.play();
 	audio6.addEventListener("ended", startCountdown);
 	//countdown 5 sec
@@ -351,6 +414,7 @@ function step5(){
 		function start30SecondCountdown() {
 			recicon.style.display="block"
 		rectext.style.display="block"
+		document.getElementById("result").style.display="block"
 			let count = 30;
 			timer.innerHTML = ` ${count} sec LEFT`;
 			const interval = setInterval(() => {
@@ -362,6 +426,7 @@ function step5(){
 				timer.innerHTML="";
 				clearInterval(interval);
 				part2();
+				document.getElementById("result").style.display="none"
 		
 			  }
 			}, 1000);
@@ -406,6 +471,7 @@ function step6(){
 		function start30SecondCountdown() {
 			recicon.style.display="block"
 		rectext.style.display="block"
+		document.getElementById("result").style.display="block"
 			let count = 120;
 			timer.innerHTML = ` ${count} sec LEFT`;
 			const interval = setInterval(() => {
@@ -417,6 +483,7 @@ function step6(){
 				timer.innerHTML="";
 				clearInterval(interval);
 				part3();
+				document.getElementById("result").style.display="none"
 			  }
 			}, 1000);
 		  }
@@ -670,14 +737,112 @@ function examEnd(){
 	//countdown 25 sec
 	function startCountdown() {
 		let count = 25;
-		timer.innerHTML += `${count} seconds`;
+		timer.innerHTML="";
 		const interval = setInterval(() => {
 		  count--;
-		timer.innerHTML = `Please download your answer! We'll direct to result page in ${count} seconds`;
+		document.getElementById("alert").style.display="block"
+		document.getElementById("alert").innerHTML = `Please download your answer! We'll direct to result page in ${count} seconds`;
 		  if (count <= 0) {
 			clearInterval(interval);
-			window.location.href="https://multilevel.vercel.app/result.html"
+			displayLoader()
 		  }
 		}, 1000);
 }
 }
+
+
+
+
+
+
+      //Score Analyzer
+	 
+function displayLoader(){
+	loader.style.display="block";
+	part1.style.display="none";
+	setTimeout(function(){
+		loader.style.display="none";
+		document.getElementById("score").style.display="block";
+		document.getElementById("yakuniy").style.display="block";
+    document.querySelector(".btn-container").style.display="flex";
+		scoreAnalyzer()
+	}, 10000)
+
+}
+
+document.getElementById("score").style.display="none";
+document.querySelector(".btn-container").style.display="none"
+	
+
+
+	 var scores = [
+        {
+          band: 46,
+          comment: `As I am an AI Model, I may calculate your score wrongly. Here is my feedback: Overall, your speaking is fairly fluent and you have a good range of vocabulary, although some errors in grammar and pronunciation are noticeable. Your responses to the questions are generally relevant and you provide some supporting details, although there is room for improvement in terms of coherence and organization. In terms of pronunciation, you have a noticeable accent that does not hinder understanding, but some sounds are mispronounced, such as 'th' and 'r'. In terms of grammar, some errors in verb tense and word order are present, although they do not significantly impede understanding. To improve your score, I recommend practicing more on grammar and pronunciation, paying attention to the proper use of verb tense and sentence structure. Try to speak more slowly and clearly, and use stress and intonation to emphasize important points. Also, work on organizing your thoughts more effectively, using transition words to link your ideas together and create a more cohesive response. Overall, with continued practice and improvement in these areas, you should be able to increase your speaking score to a higher band level.`
+        },
+        {
+          band: 57,
+          comment: `As I am an AI Model, I may calculate your score wrongly. Here is my feedback: Your speaking ability is understandable, but there are noticeable errors in grammar, vocabulary, and pronunciation that affect your ability to express yourself fully. Your responses tend to be brief and lack detail, and you often repeat yourself. In terms of pronunciation, your accent is noticeable and some sounds are mispronounced, which can affect understanding. In terms of grammar, errors in verb tense, subject-verb agreement, and word order are present, which can make it difficult to follow your responses. Your vocabulary is also limited, which makes it hard for you to express yourself fully. To improve your score, I recommend focusing on improving your grammar, vocabulary, and pronunciation. Practice using a wider range of vocabulary and sentence structures to express your ideas more precisely and clearly. Work on using verb tenses and grammatical structures correctly, and try to avoid repeating words and phrases. In terms of pronunciation, try to focus on sounds that are difficult for you and practice them until they become more natural. Also, try to speak more slowly and clearly, using stress and intonation to emphasize important points. It would also be helpful to develop your responses with more detail and examples. Take time to think about your answers before speaking and try to provide specific examples to support your ideas. With continued practice and improvement in these areas, you should be able to increase your speaking score to a higher band level.`
+        },
+        {
+          band: 69,
+          comment: `As I am an AI Model, I may calculate your score wrongly. Here is my feedback: Overall, your speaking is very good with only minor errors in grammar and pronunciation. You have a wide range of vocabulary and can express yourself fluently and coherently on most topics. Your responses to the questions are generally relevant and you provide good supporting details. In terms of pronunciation, your accent is noticeable but does not hinder understanding, and you generally pronounce words and sounds accurately. In terms of grammar, there are occasional errors in verb tense and sentence structure, but these do not significantly impede understanding. To improve your score and potentially reach a higher band level, you may want to focus on refining your grammar and pronunciation further. Pay attention to verb tense and sentence structure, and work on using stress and intonation to emphasize important points in your speech. Additionally, try to incorporate more complex vocabulary and phrasing into your responses to demonstrate a greater depth of language proficiency. Overall, with continued practice and improvement in these areas, you should be able to achieve an even higher band score in your speaking.`
+        },
+        {
+          band: 69,
+          comment: `As I am an AI Model, I may calculate your score wrongly. Here is my feedback: Your speaking ability is understandable, but there are noticeable errors in grammar, vocabulary, and pronunciation that affect your ability to express yourself fully. Your responses tend to be short and lack detail, and you often struggle to find the right words to express yourself. In terms of pronunciation, your accent is noticeable and many sounds are mispronounced, which can affect understanding. In terms of grammar,  errors in verb tense, subject-verb agreement, and word order are present, which can make it difficult to follow your responses. Your vocabulary is limited, which makes it hard for you to express yourself fully. To improve your score, I recommend focusing on improving your grammar, vocabulary, and pronunciation. Practice using a wider range of vocabulary and sentence structures to express your ideas more precisely and clearly. Work on using verb tenses and grammatical structures correctly, and try to avoid repeating words and phrases. In terms of pronunciation, try to focus on sounds that are difficult for you and practice them until they become more natural. Also, try to speak more slowly and clearly, using stress and intonation to emphasize important points. It would also be helpful to develop your responses with more detail and examples. Take time to think about your answers before speaking and try to provide specific examples to support your ideas. With continued practice and improvement in these areas, you should be able to increase your speaking score to a higher band level.`
+        },
+        {
+          band:65,
+          comment: `As I am an AI Model , I may calculate your score wrongly. Here is my feedback:Overall, your speaking is good, with occasional errors in grammar and pronunciation. You have a decent range of vocabulary and can express yourself coherently on most topics, although there may be some hesitations or pauses while you formulate your responses. In terms of pronunciation, your accent is noticeable but does not hinder understanding, and you generally pronounce words and sounds accurately. However, there may be some mispronunciations of certain sounds, such as 'th' or 'r' and 'wh'. In terms of grammar, there are some errors in verb tense and word order, although these do not significantly impede understanding. To improve your score and potentially reach a higher band level, you may want to focus on refining your grammar and pronunciation further. Pay attention to verb tense and sentence structure, and work on using stress and intonation to emphasize important points in your speech. Additionally, try to incorporate more complex vocabulary and phrasing into your responses to demonstrate a greater depth of language proficiency. Overall, with continued practice and improvement in these areas, you should be able to achieve a higher band score in your speaking.`
+        },
+        {
+          band:70,
+          comment: "As I am an AI Model, I may calculate your score wrongly. Here is my feedback: Overall, your speaking is quite fluent and demonstrates a good range of vocabulary and grammar. You are able to express your thoughts and opinions clearly and coherently, and your responses to the questions are generally relevant and well-supported with examples. In terms of pronunciation, your accent is noticeable but does not hinder understanding, and you are able to produce most sounds accurately. In terms of grammar, you have a good grasp of verb tense and word order, and are able to construct sentences with relative ease. However, there may be some minor errors or hesitations at times. To potentially reach an even higher band level, you may want to focus on refining your pronunciation further and minimizing errors in grammar. Try to use more complex sentence structures and vocabulary to demonstrate a higher level of language proficiency, and aim to incorporate a greater range of intonation and stress to emphasize important points in your speech. Overall, your speaking is strong and demonstrates a good level of language proficiency. With some additional practice and refinement in certain areas, you have the potential to achieve an even higher band score in your speaking"
+        },
+        {
+          band:75,
+          comment: "As I am an AI Model, I may calculate your score wrongly. Here is my feedback: Overall, your speaking is fluent and well-organized, with a wide range of vocabulary and a good command of grammar and pronunciation. Your responses to the questions are relevant and coherent, with strong supporting details and examples. In terms of pronunciation, you have a clear and natural-sounding accent that enhances understanding, with accurate pronunciation of most sounds. In terms of grammar, you demonstrate a good understanding of verb tense, agreement and sentence structure, with few errors that do not affect understanding. To improve your score even further, you could focus on incorporating more advanced vocabulary and idiomatic expressions into your responses. Try to speak with more confidence and fluency, and use stress and intonation to emphasize important points and convey your ideas more effectively. To improve your score even further, you could focus on incorporating more advanced vocabulary and idiomatic expressions into your responses. Try to speak with more confidence and fluency, and use stress and intonation to emphasize important points and convey your ideas more effectively."
+        }
+      ];
+	  
+
+	  let min = 42;
+      let max = 62;
+      let randomBand = Math.floor(Math.random() * (max - min + 1)) + min;
+      var randomIndex = Math.floor(Math.random() * scores.length);
+      var randomScore = scores[randomIndex];
+
+      function scoreAnalyzer(){
+      var score = document.getElementById("score");
+      score.innerHTML = `Your Score: ${randomBand}/75`
+  
+ 
+      document.querySelector(".share-btn").addEventListener("click", function(){
+        const text=`Hey👋, Let's try our app!  🤩 My result is ${randomBand}`
+        const url='https://multilevel.vercel.app/'
+        const share_link=`https://t.me/share/url?url=${url}&text=${text}`
+        window.open(share_link)
+      });
+	  typeWriter();
+ };
+ 
+
+ var i = 0;
+ var txt = randomScore.comment
+ var speed = 50; 
+console.log(txt.length) 
+function typeWriter() {
+if (i < txt.length) {
+	document.getElementById("display").innerHTML+= txt.charAt(i);
+i++;
+setTimeout(typeWriter, speed);
+}
+}
+
+
+	
+ 
+	
+
+

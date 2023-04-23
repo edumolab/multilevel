@@ -4,9 +4,26 @@
         <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=7">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <link rel="stylesheet" href="../css/bootstrap.min.css">
         <link rel="stylesheet" href="../css/style.css">
+        <link rel="stylesheet" href="../../score.css">
+        
+
+        <!-- Font Awesome -->
+<link
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+rel="stylesheet"
+/>
+<!-- Google Fonts -->
+<link
+href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+rel="stylesheet"
+/>
+<!-- MDB -->
+<link
+href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.2.0/mdb.min.css"
+rel="stylesheet"
+/>
      <style>
       .microphone-wave {
   width: 30px;
@@ -28,6 +45,10 @@
   100% {
     opacity: 0;
   }
+}
+
+.text-to-speech{
+  text-align:center
 }
 
 
@@ -56,7 +77,13 @@
 
 <!----welcome ends-->
 
-<div id="quizBar">
+<!---Loader---->
+<div id="loader" style="display: none;">
+  <span class="loader"></span>
+  </div>
+ <!-----loader ends--> 
+
+<div id="quizBar" style="display: none;">
 <div class="navbar navbar-expand-lg navbar-light bg-primary shadow">
     <div class="container-fluid">
         <a class="navbar-brand text-light fw-bold" href="#">Multi Level Speaking</a>
@@ -69,7 +96,7 @@
     <span id="part2" class=" badge px-3 py-2  bg-primary level-two fw-bold text-light mx-3 rounded">Part 2</span>
     <span id="part3" class=" badge  bg-primary px-3 py-2 level-three fw-bold text-light mx-3 rounded">Part 3</span>
   </div>
- 
+ <p class="container alert bg-danger" id="alert"></p>
  <section class="container my-3 pt-2 shadow-sm border-1" style="border: 1px solid lightgrey; border-radius: 5px;">
  <div class="row">
    <div class="col-md-5 py-3">
@@ -105,6 +132,10 @@
          <span class="circle text-center"></span>
          <center><div id="rec-icon" class="microphone-wave"></div>
          <p id="rec-text" class="text-center">Recording...</p></center>
+         <div id="result" class="text-to-speech mt-4 border-1 rounded">
+          <p id="lang" class="text-center fw-bold"></p>
+          <p id="speech" class="text-center"></p>
+         </div>
          <div id="downloadContainer" class="d-flex flex-column">
             <audio src="" controls id="audio-playback"></audio>
             <a class="btn btn-primary text-white my-3" href="" download="" id="downloadButton">Download Answer</a>
@@ -117,9 +148,50 @@
  </div>
  </section>
 
+  <p id="example1" class="text-dark"></p>
+</div>
+
+<div class="container" id="yakuniy">
+  <div class="row">
+    <div class="col-md-4 my-2">
+    <div class="card badge-success w-100 shadow border-2" style="border:2px solid rgb(8, 221, 186); ">
+        <div class="card-body d-flex flex-column">
+          <h5 class="fw-bold text-center text-dark mt-2">Get Feedback from Examiner</h5>
+          <span class="text-center text-dark">Only</span>
+          <h5 class="text-center text-primary fw-bold">15.000 UZS</h5>
+          <p class="text-dark text-justify ">Do you want to receive detailed feedback to improve your <b>Speaking Skills</b>? Send us our recordings and you will be checked by our professional examiners </p>
+
+          <a href="https://t.me/javlon_developer" target="_blank"><button class="w-100 btn btn-success py-2">Get Evaluation Now</button></a>
+          <span class="text-center my-2">Our Telegram Channel</span>
+          <a class="text-center" href="https://t.me/multilevel_speakApp" target="_blank"><i class="text-center fab fa-telegram" style="font-size: 21px; cursor:pointer"></i></a>
+          
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-8 my-5 py-3">
+          <!------------Yakuniy page----------------->
+          <section  class="container">
+         <div class="btn-container my-3">
+          <a href="https://t.me/multilevel_speakApp" target="_blank"><button class="subscribe-btn"><i class="fab fa-telegram"></i>&nbsp; &nbsp;Join in Our Telegram Channel</button></a>
+          </div>
+            <div id="res">
+            <div id="score"></div>
+            <button class="share-btn"><i class="fab fa-telegram"></i>&nbsp;&nbsp;Share Your Score</button>
+          </div>
+            <p id="display">
+            </p>
+            <p style="color:rgb(235, 22, 22); font-weight:bold;">Dear, user! The score you earned in the app may vary from your real score. The app may estimate your score wrongly. This app is created mainly for practising and tackling the stress in the real exam</p>
+
+           <a href="https://multilevel.vercel.app/"><button class="home-back">Home Page</button></a>
+          </section>
+
+    </div>
+  </div>
 
 
-<!------->
+
+<!--------------Result ends here-------------------------->
                    
                         <audio src="1.mp3" id="audio_1"></audio>
                         </div>
@@ -142,6 +214,7 @@
 </div>
 
 <script>
+  
 window.history.pushState(null, null, window.location.href);
 window.onpopstate = function () {
     window.history.go(2);
@@ -182,9 +255,10 @@ document.onkeydown = (e) => {
   )
     return false;
 };
+
+
 </script>
 
         <script src="quiz.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js" integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
+        
 </html>
