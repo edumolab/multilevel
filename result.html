@@ -7,300 +7,38 @@
 	<meta name="author" content="Kubayev Javlon">
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 	<meta name="keywords" content="Exam Online, Multi Level, Speaking, IELTS, ingliz tili, Multi Level Speaking, Speaking exam">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 	<title>Result</title>
 	<style>
-		body{
-			background: #ffffff;
-		}
-		h2{
-			color:white;
-		}
-		.wait{
-		width: 100%;
-		min-height: 100vh;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		}
-
-.loader {
-  z-index: 3;
-  position: absolute;
-  top:50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 120px;
-  height: 50px;
-}
-
-.loader-text {
-  position: absolute;
-  top: 0;
-  padding: 0;
-  margin: 0;
-  color: #C8B6FF;
-  animation: text_713 3.5s ease both infinite;
-  font-size: .8rem;
-  letter-spacing: 1px;
-}
-
-.load {
-  background-color: #9A79FF;
-  border-radius: 50px;
-  display: block;
-  height: 16px;
-  width: 16px;
-  bottom: 0;
-  position: absolute;
-  transform: translateX(64px);
-  animation: loading_713 3.5s ease both infinite;
-}
-
-.load::before {
-  position: absolute;
-  content: "";
-  width: 100%;
-  height: 100%;
-  background-color: #D1C2FF;
-  border-radius: inherit;
-  animation: loading2_713 3.5s ease both infinite;
-}
-
-@keyframes text_713 {
-  0% {
-    letter-spacing: 1px;
-    transform: translateX(0px);
-  }
-
-  40% {
-    letter-spacing: 2px;
-    transform: translateX(26px);
-  }
-
-  80% {
-    letter-spacing: 1px;
-    transform: translateX(32px);
-  }
-
-  90% {
-    letter-spacing: 2px;
-    transform: translateX(0px);
-  }
-
-  100% {
-    letter-spacing: 1px;
-    transform: translateX(0px);
-  }
-}
-
-@keyframes loading_713 {
-  0% {
-    width: 16px;
-    transform: translateX(0px);
-  }
-
-  40% {
-    width: 100%;
-    transform: translateX(0px);
-  }
-
-  80% {
-    width: 16px;
-    transform: translateX(64px);
-  }
-
-  90% {
-    width: 100%;
-    transform: translateX(0px);
-  }
-
-  100% {
-    width: 16px;
-    transform: translateX(0px);
-  }
-}
-
-@keyframes loading2_713 {
-  0% {
-    transform: translateX(0px);
-    width: 16px;
-  }
-
-  40% {
-    transform: translateX(0%);
-    width: 80%;
-  }
-
-  80% {
-    width: 100%;
-    transform: translateX(0px);
-  }
-
-  90% {
-    width: 80%;
-    transform: translateX(15px);
-  }
-
-  100% {
-    transform: translateX(0px);
-    width: 16px;
-  }
-}
- 
- 
-
-#result{
-	width: 600px;
-	border: 1px solid lightslategray;
-	border-radius: 5px;
-	padding: 20px;
-}
-
-#res{
-  display:flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-direction: column;
-}
-#score{
-	color: white;
-	background: rgb(6, 163, 129);
-	border-radius: 10px;
-	border: 1px solid rgb(6, 163, 129);
-	padding: 8px;
-	font-size: 18px;
-	text-align: center;	
-  width: 100%;
-}
-
-.fade{
-	animation-name: fade;
-	animation-duration: 2s;
-	animation-timing-function: ease;
-	display: none;
 	
-}
-
-@keyframes fade{
-	0%{
-		opacity: 1;
-	}
-
-	100%{
-		opacity: 0;
-
-	}
-}
-
-.home-back{
-	padding: 10px 18px;
-	background: #0000ff;
-	color: white;
-	cursor: pointer;
-	border-radius: 30px;
-	border: 1px solid #0000ff;
-}
-
-a{
-	color: white;
-}
-
-a:hover{
-	text-decoration: underline;
-}
-
-span{
-  color:#0000ff;
-}
-
-mark{
-  background-color:rgb(250, 235, 215);
-}
-
-.btn-container{
-  width:100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top:30px;
-}
-
-.subscribe-btn{
- padding: 8px 20px;
- border: 1px solid dodgerblue;
- border-radius: 30px;
- background: dodgerblue;
- width: 450px;
- font-size:23px;
- font-weight: bold;
- color:white;
- cursor:pointer;
-}
-
-@media screen and (max-width:660px) {
-  .btn-container{
-  width:100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top:30px;
-}
-
-.subscribe-btn{
- padding: 8px 20px;
- width:300px;
- border: 1px solid dodgerblue;
- border-radius: 30px;
- background: dodgerblue;
- font-size:17px;
- font-weight: bold;
- color:white;
- cursor:pointer;
-}
-
-}
-
-@media screen and (max-width:432px) {
-  .btn-container{
-  width:100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin:30px 0;
-}
-
-.subscribe-btn{
- padding: 8px 20px;
- width:230px;
- border: 1px solid dodgerblue;
- border-radius: 30px;
- background: dodgerblue;
- font-size:16px;
- font-weight: bold;
- color:white;
- cursor:pointer;
-}
-
-}
-
-.share-btn{
-  background: dodgerblue;
-  color: white;
-  float: right;
-  border: 1px solid dodgerblue;
-  border-radius: 3px;
-  padding: 8px;
-  cursor: pointer;
-  font-size:17px;
-  margin:6px 0;
-  width: 100%;
-}
-
 	</style>
 </head>
 <body>
-  <div class="btn-container">
+  <div class="container bg-white  py-5 px-5 mt-4">
+    <h3>Assalamu alaykum hurmatli foydalanuvchilar! </h3>
+      <p>Bugun biz, Edumo jamoasi sizlarga <b>bir noxush xabarni</b> yetkazmoqchimiz.
+Xabaringiz bor, bu ilovamiz <b>MUTLAQO TEKIN</b> va undan har kim <b>ISTAGANICHA</b> foydalana oladi.</p>
+
+<p>Shu paytgacha biz qariyb <span style="color:blue"><b>76, 000 mingta</b></span> takrorlanmas foydalanuvchilarga xizmat ko'rsatib keldik va kunlik trafigimiz<span style="color:red"> <b>7, 600 kishini</b></span> tashkil etadi. Bu qisqa fursat uchun ajoyib ko'rsatkichdir.</p>
+<p>Lekin, hozirda bizda <i><b>dasturiy ta'minot yuzasidan ayrim kutilmagan xarajatlar</b></i> yuzaga chiqib turibdi. </p>
+
+<p>Agarda <b>keyingi olti kun ichida</b> bu muammo bartaraf etilmasa, <b><u>sayt va ilova butunlay ishdan to'xtaydi</u></b>. Bu hamma uchun noxush xabar. <i>Shu paytgacha qilingan ishimiz zoe ketishi bizning ham ko'nglimizni xira qilmasdan qolmaydi.</i></p>
+
+<p>Shu maqsadda siz azizlardan <b><u>moliyaviy yordam</u></b> so'rab qolamiz. <span style="color:dodgerblue;"><b>Ilovamizni saqlab qolish sizning qo'lingizda!</b></span> </p>
+<p class="text-warning fw-bold">Kiritgan mablag'ingiz nafaqat siz uchun, balki sizdan keyingi ilm ahliga ham xizmat ko'rsatish uchun ishlatiladi.</p>
+
+<p>Bu xabarimizga loqayd qolmasdan, beminnat va saxovatli yordamingizni ko'rsatasiz deya umid qilgan holda,</p>
+
+<h5>Edumo Jamoasi A'zolari.</h5>
+
+<h4>💳 Karta raqami:<br> <a href="tel:8600 0423 5121 0603">8600 0423 5121 0603</a><br>
+XATAMOV SARVAR</p></h4>
+<a href="https://multilevel.vercel.app/"><button class="btn btn-primary mt-5 home-back">Home Page</button></a>
+  </div>
+  <!------
+  <div class="btn-container" id="res_page">
    <a href="https://t.me/speakingMulti" target="_blank"><button class="subscribe-btn"><i class="fab fa-telegram"></i>&nbsp; &nbsp;Join in Our Telegram Group</button></a>
   </div>
 <div class="wait">	
@@ -325,11 +63,21 @@ mark{
 
 
 <script>
-	document.getElementById("score").style.display="none";
+  document.getElementById("res_page").style.display="none";
+  document.getElementById("result").style.display="none";
   document.querySelector(".btn-container").style.display="none"
-	document.getElementById("result").style.display="none"
+	document.querySelector(".load").style.display="none"
+  document.querySelector(".loader-text").style.display="none"
+  
+  function showLoader(){
+    document.querySelector(".load").style.display="block"
+  document.querySelector(".loader-text").style.display="block"
+  }
+window.onload=showLoader()
+
 	setTimeout(function(){
-		document.querySelector(".loader").classList.add("fade");
+    document.querySelector(".load").style.display="none"
+  document.querySelector(".loader-text").style.display="none"
 		document.getElementById("score").style.display="block";
 		document.getElementById("result").style.display="block";
     document.querySelector(".btn-container").style.display="flex";
@@ -371,7 +119,7 @@ mark{
       
       function scoreAnalyzer(){
       let min = 42;
-      let max = 62;
+      let max = 68;
       let randomBand = Math.floor(Math.random() * (max - min + 1)) + min;
       var randomIndex = Math.floor(Math.random() * scores.length);
       var randomScore = scores[randomIndex];
@@ -389,40 +137,8 @@ mark{
  };
  
  
-//hide function
 
-document.onkeydown = function(e) {
-    if (e.ctrlKey && (e.keyCode === 67 || e.keyCode === 86 || e.keyCode === 85 ||     e.keyCode === 117 || e.keycode === 17 || e.keycode === 85)) {//ctrl+u Alt+c, Alt+v will also be disabled sadly.
-        alert('not allowed');
-    }
-    return false;
-};
-
-document.onkeydown = function(e) {
-        if (e.ctrlKey && 
-            (e.keyCode === 85 )) {
-            return false;
-        }
-};
-
-// Disable right-click
-document.addEventListener('contextmenu', (e) => e.preventDefault());
-
-function ctrlShiftKey(e, keyCode) {
-  return e.ctrlKey && e.shiftKey && e.keyCode === keyCode.charCodeAt(0);
-}
-
-document.onkeydown = (e) => {
-  // Disable F12, Ctrl + Shift + I, Ctrl + Shift + J, Ctrl + U
-  if (
-    event.keyCode === 123 ||
-    ctrlShiftKey(e, 'I') ||
-    ctrlShiftKey(e, 'J') ||
-    ctrlShiftKey(e, 'C') ||
-    (e.ctrlKey && e.keyCode === 'U'.charCodeAt(0))
-  )
-    return false;
-};
 </script>
+------->
 </body>
 </html>
